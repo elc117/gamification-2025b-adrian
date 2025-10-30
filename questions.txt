@@ -1,0 +1,33 @@
+1. Which one of those is NOT an operating system?
+A) Windows
+B) Linux
+C) Android
+D) FreeBSD
+
+2. What does this C code do?
+#include <stdlib.h>
+int main() {
+    while(1) malloc(1024);
+}
+A) Allocs memory for an array of 1024 elements
+B) Waits 1024 seconds to start
+C) A virus to make the system run out of memory
+D) Nothing
+
+3. What is cache memory?
+A) A small memory to hold temporary values from RAM that are used frequently
+B) A brand of smartphones
+C) A slower memory used to hold big files that can't fit in RAM.
+D) A type of persistent storage, similar to HD and SSD.
+
+4. <answer> is 123 in hexadecimal.
+A) answer = 0x7B
+B) answer = 0x123
+C) answer = 0x47
+D) answer = 0x2C7
+
+5. Which of these algorithms is better for sorting integer arrays?
+A) RadixSort
+B) QuickSort
+C) CountingSort
+D) Linked Lists
