@@ -1,26 +1,52 @@
 package io.github.gamification;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-/** First screen of the application. Displayed after the application is created. */
+/** First screen of the application. Displays a centered idle animation (character does not move). */
 public class FirstScreen implements Screen {
+    private SpriteBatch batch;
+    private OrthographicCamera camera;
+
+    private Knight knight; // The main character
+
     @Override
     public void show() {
-        // Prepare your screen here.
+        batch = new SpriteBatch();
+        camera = new OrthographicCamera();
+        camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
+
+        // Create a small knight (128x128) centered on screen.
+        knight = new Knight(camera.viewportWidth / 4f, camera.viewportHeight / 4f, 128f, 128f);
     }
 
     @Override
     public void render(float delta) {
-        // Draw your screen here. "delta" is the time since last render in seconds.
+        // Update animation state
+        knight.update(delta);
+
+        Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        camera.update();
+        batch.setProjectionMatrix(camera.combined);
+
+        // Draw the knight
+        batch.begin();
+        knight.render(batch);
+        batch.end();
     }
 
     @Override
     public void resize(int width, int height) {
         // If the window is minimized on a desktop (LWJGL3) platform, width and height are 0, which causes problems.
         // In that case, we don't resize anything, and wait for the window to be a normal size before updating.
-        if(width <= 0 || height <= 0) return;
+        if (width <= 0 || height <= 0) return;
 
-        // Resize your screen here. The parameters represent the new window size.
+        camera.setToOrtho(false, width, height); // Update camera with new size
     }
 
     @Override
@@ -40,6 +66,8 @@ public class FirstScreen implements Screen {
 
     @Override
     public void dispose() {
-        // Destroy screen's assets here.
+        // Dispose of assets when no longer needed
+        if (batch != null) batch.dispose();
+        if (knight != null) knight.dispose();
     }
 }

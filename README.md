@@ -11,7 +11,9 @@ O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de 
 
 # Processo de desenvolvimento 🛠️:
 ## Detalhes:
-TODO
+Comecei implementando o personagem principal. Criei a classe Knight, que é um cavaleiro
+desenhado com um animation sprite. <br>
+Baixei as imagens do site gameart2d.com. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências.
@@ -27,3 +29,4 @@ TODO
 
 # Referências e créditos 📚:
 LibGDX. <https://libgdx.com/>
+Game Art 2D. <https://www.gameart2d.com/the-knight-free-sprites.html>
