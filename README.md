@@ -23,10 +23,15 @@ TODO
 
 # Orientações para execução 🖥️:
 É necessário ter o Java JDK instalado.
+```shell
+cd game && ./gradlew html:superDev
+```
 
 # Resultado final 📊:
 TODO
 
 # Referências e créditos 📚:
 LibGDX. <https://libgdx.com/>
-Game Art 2D. <https://www.gameart2d.com/the-knight-free-sprites.html>
+Game Art 2D. THE KNIGHT - FREE SPRITES. <https://www.gameart2d.com/the-knight-free-sprites.html>
+Raizensoft. How to create animations from spritesheets in libGDX. <https://raizensoft.com/tutorial/create-animation-spritesheet-libgdx/>
+LibGDX. 2D Animation. <https://libgdx.com/wiki/graphics/2d/2d-animation>
