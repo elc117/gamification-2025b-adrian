@@ -1,25 +1,29 @@
-# Identificação:
+# Identificação 🪪:
 Nome:  Adrian Bellé Secretti <br>
 Curso: Sistemas de Informação
 
-# Proposta:
-descrição do tema/objetivo do trabalho, conforme a proposta validada
+# Proposta 📄:
+Este é um jogo web/desktop feito na biblioteca LibGDX em Java.
+Se trata de um quiz com perguntas relacionadas a temas de computação. <br>
+Para cada questão errada, o jogador perde vida.
+Se chegar ao final sem morrer, vence o jogo e o inimigo, que faz as perguntas, é derrotado. <br>
+O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de programação.
 
-# Processo de desenvolvimento:
+# Processo de desenvolvimento 🛠️:
 ## Detalhes:
+TODO
+
 ## Dificultades:
-## Soluções:
+Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências.
 
-comentários sobre etapas do desenvolvimento, incluindo detalhes técnicos sobre os recursos de orientação a objetos utilizados, sobre erros/dificuldades/soluções e sobre as contribuições de cada integrante (não usar IA para gerar esses comentários!)
+# Diagrama de classes 📋:
+TODO
 
-# Diagrama de classes:
-imagem com diagrama de classes do projeto
+# Orientações para execução 🖥️:
+É necessário ter o Java JDK instalado.
 
-# Orientações para execução:
-instalação de dependências, etc.
+# Resultado final 📊:
+TODO
 
-# Resultado final:
-demonstrar execução em GIF animado ou vídeo curto
-
-# Referências e créditos:
+# Referências e créditos 📚:
 LibGDX. <https://libgdx.com/>
