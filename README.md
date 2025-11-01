@@ -11,9 +11,13 @@ O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de 
 
 # Processo de desenvolvimento 🛠️:
 ## Detalhes:
+31/10: <br>
 Comecei implementando o personagem principal. Criei a classe Knight, que é um cavaleiro
 desenhado com um animation sprite. <br>
 Baixei as imagens do site gameart2d.com. <br>
+Depois, troquei o nome da classe Knight para Character, para poder reaproveitá-la. <br>
+Então, criei o personagem wizard, que será o personagem que fará as perguntas. <br>
+![image](images/10-31.png)
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências.
@@ -35,3 +39,4 @@ LibGDX. <https://libgdx.com/>
 Game Art 2D. THE KNIGHT - FREE SPRITES. <https://www.gameart2d.com/the-knight-free-sprites.html>
 Raizensoft. How to create animations from spritesheets in libGDX. <https://raizensoft.com/tutorial/create-animation-spritesheet-libgdx/>
 LibGDX. 2D Animation. <https://libgdx.com/wiki/graphics/2d/2d-animation>
+itch.io. Wizard Pack by LuizMelo. <https://luizmelo.itch.io/wizard-pack>
