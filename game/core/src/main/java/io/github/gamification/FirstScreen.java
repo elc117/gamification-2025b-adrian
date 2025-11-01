@@ -11,7 +11,8 @@ public class FirstScreen implements Screen {
     private SpriteBatch batch;
     private OrthographicCamera camera;
 
-    private Knight knight; // The main character
+    private Character knight; // The main character
+    private Character wizard; // The villain character
 
     @Override
     public void show() {
@@ -19,14 +20,16 @@ public class FirstScreen implements Screen {
         camera = new OrthographicCamera();
         camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
 
-        // Create a small knight (128x128) centered on screen.
-        knight = new Knight(camera.viewportWidth / 4f, camera.viewportHeight / 4f, 128f, 128f);
+        // Create a small knight (128x128) on the bottom-left quarter of the screen
+        knight = new Character(camera.viewportWidth / 4f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
+        wizard = new Character(camera.viewportWidth / 1.33f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
     }
 
     @Override
     public void render(float delta) {
         // Update animation state
         knight.update(delta);
+        wizard.update(delta);
 
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -37,6 +40,7 @@ public class FirstScreen implements Screen {
         // Draw the knight
         batch.begin();
         knight.render(batch);
+        wizard.render(batch);
         batch.end();
     }
 
@@ -69,5 +73,6 @@ public class FirstScreen implements Screen {
         // Dispose of assets when no longer needed
         if (batch != null) batch.dispose();
         if (knight != null) knight.dispose();
+        if (wizard != null) wizard.dispose();
     }
 }
