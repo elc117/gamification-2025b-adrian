@@ -19,8 +19,12 @@ Depois, troquei o nome da classe Knight para Character, para poder reaproveitá-
 Então, criei o personagem wizard, que será o personagem que fará as perguntas. <br>
 ![image](images/10-31.png)
 
+01/11: <br>
+Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar quando for implementá-las. <br>
+
 ## Dificultades:
-Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências.
+Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
+Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. <br>
 
 # Diagrama de classes 📋:
 TODO
