@@ -1,0 +1,160 @@
+{
+	"questions": [
+		{
+			"topic": "operating_systems",
+			"question": "Which one of these is NOT an operating system?",
+			"options": [
+				"Windows NT",
+				"Linux",
+				"MS-DOS",
+				"FreeBSD",
+				"Solaris"
+			],
+			"answer": 1
+		},
+		{
+			"topic": "programming",
+			"question": "What does this C code do? while(1) malloc(1024);",
+			"options": [
+				"Waits 1024 seconds to start",
+				"Allocs 1024 bytes of memory 1 time",
+				"A virus-like program that consumes memory",
+				"Creates an array of 1024 integers",
+				"Nothing"
+			],
+			"answer": 2
+		},
+		{
+			"topic": "hardware",
+			"question": "What is cache memory?",
+			"options": [
+				"A brand of smartphones that have more memory than usual",
+				"A slower memory used to hold big files that can't fit in RAM",
+				"A persistent storage like an HD or SSD",
+				"A backup memory that stores data when the computer is turned off",
+				"A smaller memory to hold temporary values from RAM that are used frequently"
+			],
+			"answer": 4
+		},
+		{
+			"topic": "number_systems",
+			"question": "<answer> is 123 in hexadecimal.",
+			"options": [
+				"0x7B",
+				"0x123",
+				"0x47",
+				"0x2C7",
+				"0xAB"
+			],
+			"answer": 0
+		},
+		{
+			"topic": "programming",
+			"question": "Which of these algorithms is better for sorting integer arrays?",
+			"options": [
+				"Radix Sort",
+				"Quick Sort",
+				"Counting Sort",
+				"Bubble Sort",
+				"Linked Lists"
+			],
+			"answer": 2
+		},
+		{
+			"topic": "internet",
+			"question": "In the internet, what does DNS stand for?",
+			"options": [
+				"Domain Name System",
+				"Data Network Service",
+				"Digital Numbering System",
+				"Deviated Nasal Septum",
+				"Distributed Network Security"
+			],
+			"answer": 0
+		},
+		{
+			"topic": "history_of_computing",
+			"question": "Who was Alan Turing?",
+			"options": [
+				"A famous hacker known for breaking into government systems and creating the WikiLeaks website",
+				"A pioneer in the development of the internet, inventor of the http protocol",
+				"The inventor of the first mechanical computer",
+				"A computer scientist known for laying the groundwork for modern computing",
+				"A baron of scotland, inventor of the writing machine that later was the base to the creation of keyboards"
+			],
+			"answer": 3
+		},
+		{
+			"topic": "programming",
+			"question": "What is the purpose of the 'return' statement in a function?",
+			"options": [
+				"To exit the program",
+				"To print a value to the console",
+				"To go back to a previous command",
+				"To send a value back to the caller of the function",
+				"To create a loop"
+			],
+			"answer": 3
+		},
+		{
+			"topic": "programming",
+			"question": "Which of the following data structures uses FIFO (First In, First Out) principle?",
+			"options": [
+				"Linked List",
+				"Stack",
+				"Queue",
+				"Binary Tree",
+				"Trash Can"
+			],
+			"answer": 2
+		},
+		{
+			"topic": "programming",
+			"question": "In object-oriented programming, what does inheritance allow a class to do?",
+			"options": [
+				"Allow a class to inherit the money and house of its parents.",
+				"Use methods and properties of another class",
+				"Prevent code duplication",
+				"Keep elements of the class private",
+				"Allow a function to have multiple forms"
+			],
+			"answer": 1
+		},
+		{
+			"topic": "operating_systems",
+			"question": "What is a 'syscall'?",
+			"options": [
+				"A type of malware that infects system files by calling them multiple times",
+				"A command used to make calls using a SIM card",
+				"A software to call system administrators for help",
+				"A network protocol for secure communication between systems",
+				"A system call that allows programs to request services from the operating system"
+			],
+			"answer": 4
+		},
+		{
+			"topic": "internet",
+			"question": "A <answer> creates a secure connection between your device and the internet, encrypting your data and masking your IP address. This helps protect your privacy online and allows you to access restricted content.",
+			"options": [
+				"Firewall",
+				"Proxy",
+				"VPN",
+				"Tor Network",
+				"Router"
+			],
+			"answer": 2
+		},
+		{
+			"topic": "internet",
+			"question": "What is the site 'thepiratebay.org' known for?",
+			"options": [
+				"A multiplayer web game with battles between pirate ships",
+				"Providing a platform for legal music downloads",
+				"Hosting information about historic facts related to pirates",
+				"Being a popular torrent site for sharing pirated content",
+				"Offering cloud storage services"
+			],
+			"answer": 3
+		}
+	]
+}
