@@ -22,6 +22,10 @@ Então, criei o personagem wizard, que será o personagem que fará as perguntas
 01/11: <br>
 Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar quando for implementá-las. <br>
 
+02/11: <br>
+Corrigi a textura do mago que estava invertida e fora do lugar. <br>
+Configurei o makefile para por padrão testar a versão desktop, que é mais rápida para compilar. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. <br>
