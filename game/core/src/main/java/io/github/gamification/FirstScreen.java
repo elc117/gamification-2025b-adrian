@@ -21,8 +21,8 @@ public class FirstScreen implements Screen {
         camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
 
         // Create a small knight (128x128) on the bottom-left quarter of the screen
-        knight = new Character(camera.viewportWidth / 4f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
-        wizard = new Character(camera.viewportWidth / 1.33f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
+        knight = new Character(camera.viewportWidth / 8f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
+        wizard = new Character(camera.viewportWidth / 1.2f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
     }
 
     @Override
