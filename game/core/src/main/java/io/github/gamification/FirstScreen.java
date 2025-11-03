@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /** First screen of the application. Displays a centered idle animation (character does not move). */
@@ -13,6 +15,11 @@ public class FirstScreen implements Screen {
 
     private Character knight; // The main character
     private Character wizard; // The villain character
+    
+    // Title of the game, at the top of the screen
+    private BitmapFont font;
+    private GlyphLayout titleLayout;
+    private String title = "Programming Quest";
 
     @Override
     public void show() {
@@ -23,11 +30,15 @@ public class FirstScreen implements Screen {
         // Create a small knight (128x128) on the bottom-left quarter of the screen
         knight = new Character(camera.viewportWidth / 8f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
         wizard = new Character(camera.viewportWidth / 1.2f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
+
+        // Initialize font and layout for the title label
+        font = new BitmapFont(); // default font
+        font.getData().setScale(1.5f); // Make the font larger for the title
+        titleLayout = new GlyphLayout(font, title);
     }
 
     @Override
     public void render(float delta) {
-        // Update animation state
         knight.update(delta);
         wizard.update(delta);
 
@@ -37,10 +48,16 @@ public class FirstScreen implements Screen {
         camera.update();
         batch.setProjectionMatrix(camera.combined);
 
-        // Draw the knight
         batch.begin();
+
         knight.render(batch);
         wizard.render(batch);
+
+        titleLayout.setText(font, title);
+        float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
+        float titleY = camera.viewportHeight - 15f;
+        font.draw(batch, titleLayout, titleX, titleY);
+
         batch.end();
     }
 
@@ -74,5 +91,6 @@ public class FirstScreen implements Screen {
         if (batch != null) batch.dispose();
         if (knight != null) knight.dispose();
         if (wizard != null) wizard.dispose();
+        if (font != null) font.dispose();
     }
 }
