@@ -28,6 +28,10 @@ Configurei o makefile para por padrão testar a versão desktop, que é mais rá
 Adicionei um text label no topo da tela com o nome do jogo. <br>
 <img src="images/11-02.png" alt="11-02" width="384"/>
 
+### 03/11:
+Separei o programa em funções menores e crei classes para o cavaleiro e o mago. <br>
+Aumentei o tamanho da textura do mago, já que estava menor que o cavaleiro. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
