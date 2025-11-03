@@ -28,8 +28,8 @@ public class FirstScreen implements Screen {
         batch = new SpriteBatch();
         initCamera();
 
-        knight = new Character(camera.viewportWidth / 8f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
-        wizard = new Character(camera.viewportWidth / 1.2f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
+        knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
+        wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
 
         initTitle();
     }
