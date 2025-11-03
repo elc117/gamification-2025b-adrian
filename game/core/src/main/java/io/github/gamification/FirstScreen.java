@@ -10,13 +10,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /** First screen of the application. Displays a centered idle animation (character does not move). */
 public class FirstScreen implements Screen {
+    // Screen configuration
     private SpriteBatch batch;
     private OrthographicCamera camera;
 
-    private Character knight; // The main character
-    private Character wizard; // The villain character
-    
-    // Title of the game, at the top of the screen
+    // Characters of the game
+    private Character knight;
+    private Character wizard;
+
+    // Title of the game
     private BitmapFont font;
     private GlyphLayout titleLayout;
     private String title = "Programming Quest";
@@ -24,17 +26,12 @@ public class FirstScreen implements Screen {
     @Override
     public void show() {
         batch = new SpriteBatch();
-        camera = new OrthographicCamera();
-        camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
+        initCamera();
 
-        // Create a small knight (128x128) on the bottom-left quarter of the screen
         knight = new Character(camera.viewportWidth / 8f, camera.viewportHeight / 4f, 128f, 128f, "knight", 10);
         wizard = new Character(camera.viewportWidth / 1.2f, camera.viewportHeight / 4f, 128f, 128f, "wizard", 6);
 
-        // Initialize font and layout for the title label
-        font = new BitmapFont(); // default font
-        font.getData().setScale(1.5f); // Make the font larger for the title
-        titleLayout = new GlyphLayout(font, title);
+        initTitle();
     }
 
     @Override
@@ -42,21 +39,14 @@ public class FirstScreen implements Screen {
         knight.update(delta);
         wizard.update(delta);
 
-        Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
-        camera.update();
-        batch.setProjectionMatrix(camera.combined);
+        clear();
+        renderCamera();
 
         batch.begin();
 
         knight.render(batch);
         wizard.render(batch);
-
-        titleLayout.setText(font, title);
-        float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
-        float titleY = camera.viewportHeight - 15f;
-        font.draw(batch, titleLayout, titleX, titleY);
+        renderTitle();
 
         batch.end();
     }
@@ -92,5 +82,35 @@ public class FirstScreen implements Screen {
         if (knight != null) knight.dispose();
         if (wizard != null) wizard.dispose();
         if (font != null) font.dispose();
+    }
+
+    // My custom functions
+
+    public void clear() {
+        Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+    }
+
+    public void initCamera() {
+        camera = new OrthographicCamera();
+        camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
+    }
+
+    public void initTitle() {
+        font = new BitmapFont(); // default font
+        font.getData().setScale(1.5f); // Make the font larger for the title
+        titleLayout = new GlyphLayout(font, title);
+    }
+
+    public void renderCamera() {
+        camera.update();
+        batch.setProjectionMatrix(camera.combined);
+    }
+
+    public void renderTitle() {
+        titleLayout.setText(font, title);
+        float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
+        float titleY = camera.viewportHeight - 15f;
+        font.draw(batch, titleLayout, titleX, titleY);
     }
 }
