@@ -10,7 +10,7 @@ Se chegar ao final sem morrer, vence o jogo e o inimigo, que faz as perguntas, �
 O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de programação.
 
 # Processo de desenvolvimento 🛠️:
-## Detalhes:
+## Diário:
 ### 31/10:
 Comecei implementando o personagem principal. Criei a classe Knight, que é um cavaleiro
 desenhado com um animation sprite. <br>
@@ -31,6 +31,11 @@ Adicionei um text label no topo da tela com o nome do jogo. <br>
 ### 03/11:
 Separei o programa em funções menores e crei classes para o cavaleiro e o mago. <br>
 Aumentei o tamanho da textura do mago, já que estava menor que o cavaleiro. <br>
+
+### 05/11:
+Crei as classes para guardas o quiz com as perguntas e opções. <br>
+Usei o sistema da própria Gdx de json parsing. <br>
+A classe Quiz contém um vetor de Question. A classe question contém os campos question, options e answer. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
