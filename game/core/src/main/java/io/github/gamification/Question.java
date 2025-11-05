@@ -15,4 +15,14 @@ public class Question {
 			System.exit(1);
 		}
 	}
+
+	public String getQuestion() {
+		return question;
+	}
+	public String[] getOptions() {
+		return options;
+	}
+	public int getAnswer() {
+		return answer;
+	}
 }
