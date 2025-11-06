@@ -103,7 +103,7 @@ public class FirstScreen implements Screen {
 
     public void initTitle() {
         font = new BitmapFont(); // default font
-        font.getData().setScale(1.5f); // Make the font larger for the title
+        font.getData().setScale(1f); // Make the font larger for the title
         titleLayout = new GlyphLayout(font, title);
     }
 
