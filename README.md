@@ -37,6 +37,10 @@ Crei as classes para guardas o quiz com as perguntas e opções. <br>
 Usei o sistema da própria Gdx de json parsing. <br>
 A classe Quiz contém um vetor de Question. A classe question contém os campos question, options e answer. <br>
 
+### 06/11:
+Adicionei uma imagem de fundo. Baixei a imagem do site infoupdate.org. <br>
+<img src="images/11-06.png" alt="11-06" width="256"/>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -63,3 +67,8 @@ TODO
 7. Stack Overflow. Libgdx How Do I display Text? <https://stackoverflow.com/questions/38644099/libgdx-how-do-i-display-text>
 8. LibGDX.info. Label & Font Basic. <https://libgdxinfo.wordpress.com/basic-label/>
 9. CodingTechRoom. How to Display Text in LibGDX? <https://codingtechroom.com/question/-libgdx-display-text>
+10. Infoupdate.org. Cartoon Images Hd Free. <https://infoupdate.org/cartoon-images-hd-free/>
+11. Video Cartoon Background at Amelie Challis blog. <https://storage.googleapis.com/dztonjyhtatade/video-cartoon-background.html>
+12. Stack Overflow. libGdx - image background. <https://stackoverflow.com/questions/17623373/libgdx-image-background>
+13. CodingTechRoom. How to set a background image in LibGDX using FitViewPort. <https://codingtechroom.com/question/set-background-image-libgdx-fitviewport>
+14. Game Development. How to load background image in sprite class in libgdx? <https://gamedev.stackexchange.com/questions/137632/how-to-load-background-image-in-sprite-class-in-libgdx>
