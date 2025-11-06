@@ -2,6 +2,7 @@ package io.github.gamification;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -13,6 +14,9 @@ public class FirstScreen implements Screen {
     // Screen configuration
     private SpriteBatch batch;
     private OrthographicCamera camera;
+
+    // Background texture
+    private Texture backgroundTexture;
 
     // Characters of the game
     private Character knight;
@@ -26,11 +30,11 @@ public class FirstScreen implements Screen {
     @Override
     public void show() {
         batch = new SpriteBatch();
-        initCamera();
 
+        initCamera();
+        backgroundTexture = new Texture(Gdx.files.internal("background.jpg"));
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
-
         initTitle();
     }
 
@@ -44,6 +48,7 @@ public class FirstScreen implements Screen {
 
         batch.begin();
 
+        batch.draw(backgroundTexture, 0, 0, camera.viewportWidth, camera.viewportHeight);
         knight.render(batch);
         wizard.render(batch);
         renderTitle();
