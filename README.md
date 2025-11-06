@@ -33,12 +33,13 @@ Separei o programa em funções menores e crei classes para o cavaleiro e o mago
 Aumentei o tamanho da textura do mago, já que estava menor que o cavaleiro. <br>
 
 ### 05/11:
-Crei as classes para guardas o quiz com as perguntas e opções. <br>
+Crei as classes para guardar o quiz com as perguntas e opções. <br>
 Usei o sistema da própria Gdx de json parsing. <br>
-A classe Quiz contém um vetor de Question. A classe question contém os campos question, options e answer. <br>
+A classe Quiz contém um vetor to tipo Question[]. A classe Question contém os campos question, options e answer. <br>
 
 ### 06/11:
 Adicionei uma imagem de fundo. Baixei a imagem do site infoupdate.org. <br>
+Diminui o tamanho da fonte do texto. <br>
 <img src="images/11-06.png" alt="11-06" width="256"/>
 
 ## Dificultades:
@@ -49,7 +50,7 @@ Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele an
 TODO
 
 # Orientações para execução 🖥️:
-É necessário ter o Java JDK instalado.
+É necessário ter o Java JDK instalado apenas.
 ```shell
 cd game && ./gradlew html:superDev
 ```
@@ -72,3 +73,6 @@ TODO
 12. Stack Overflow. libGdx - image background. <https://stackoverflow.com/questions/17623373/libgdx-image-background>
 13. CodingTechRoom. How to set a background image in LibGDX using FitViewPort. <https://codingtechroom.com/question/set-background-image-libgdx-fitviewport>
 14. Game Development. How to load background image in sprite class in libgdx? <https://gamedev.stackexchange.com/questions/137632/how-to-load-background-image-in-sprite-class-in-libgdx>
+15. Stack Overflow. How to Parse this JSON with LibGDX. <https://stackoverflow.com/questions/35343727/how-to-parse-this-json-with-libgdx>
+16. Raizensoft. How to use JSON with libGDX. <https://raizensoft.com/tutorial/parse-json-libgdx/>
+17. LibGDX. Reading and writing JSON. <https://libgdx.com/wiki/utils/reading-and-writing-json>
