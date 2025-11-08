@@ -1,6 +1,7 @@
 package io.github.gamification;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.GL20;
@@ -27,6 +28,9 @@ public class FirstScreen implements Screen {
     private GlyphLayout titleLayout;
     private String title = "Programming Quest";
 
+    // Game soundtrack that will play in loop
+    private Music soundtrack;
+
     @Override
     public void show() {
         batch = new SpriteBatch();
@@ -36,6 +40,7 @@ public class FirstScreen implements Screen {
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
         initTitle();
+        playSoundtrack();
     }
 
     @Override
@@ -117,5 +122,12 @@ public class FirstScreen implements Screen {
         float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
         float titleY = camera.viewportHeight - 15f;
         font.draw(batch, titleLayout, titleX, titleY);
+    }
+
+    private void playSoundtrack() {
+        soundtrack = Gdx.audio.newMusic(Gdx.files.internal("audio/soundtrack.ogg"));
+        soundtrack.setVolume(0.4f);
+        soundtrack.setLooping(true);
+        soundtrack.play();
     }
 }
