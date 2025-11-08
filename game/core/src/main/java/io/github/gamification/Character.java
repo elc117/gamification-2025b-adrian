@@ -18,10 +18,10 @@ public class Character {
     private Animation<TextureRegion> animation; // Idle animation
     private float stateTime;                    // Time elapsed since animation start
 
-    private float x;                            // X position of the character
-    private float y;                            // Y position of the character
-    private float width;                        // Width of the character
-    private float height;                       // Height of the character
+    protected float x;                            // X position of the character
+    protected float y;                            // Y position of the character
+    protected float width;                        // Width of the character
+    protected float height;                       // Height of the character
 
     /**
      * Creates a character centered at (centerX, centerY) with given width/height in pixels.
