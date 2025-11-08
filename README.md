@@ -51,7 +51,7 @@ Já no início tive dificuldade em fazer o setup do projeto, pois estava dando e
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
 
 # Diagrama de classes 📋:
-TODO
+<img src="images/diagram.png" alt="diagram" width="512"/>
 
 # Orientações para execução 🖥️:
 É necessário ter o Java JDK instalado apenas. <br>
