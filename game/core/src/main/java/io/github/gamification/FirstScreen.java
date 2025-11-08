@@ -36,7 +36,7 @@ public class FirstScreen implements Screen {
         batch = new SpriteBatch();
 
         initCamera();
-        backgroundTexture = new Texture(Gdx.files.internal("background.jpg"));
+        backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
         initTitle();
@@ -96,28 +96,28 @@ public class FirstScreen implements Screen {
 
     // My custom functions
 
-    public void clear() {
+    private void clear() {
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
     }
 
-    public void initCamera() {
+    private void initCamera() {
         camera = new OrthographicCamera();
         camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); // Set origin to bottom-left
     }
 
-    public void initTitle() {
+    private void initTitle() {
         font = new BitmapFont(); // default font
         font.getData().setScale(1f); // Make the font larger for the title
         titleLayout = new GlyphLayout(font, title);
     }
 
-    public void renderCamera() {
+    private void renderCamera() {
         camera.update();
         batch.setProjectionMatrix(camera.combined);
     }
 
-    public void renderTitle() {
+    private void renderTitle() {
         titleLayout.setText(font, title);
         float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
         float titleY = camera.viewportHeight - 15f;
