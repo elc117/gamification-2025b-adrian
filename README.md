@@ -6,7 +6,7 @@ Curso: Sistemas de Informação
 Este é um jogo web/desktop feito na biblioteca LibGDX em Java.
 Se trata de um quiz com perguntas relacionadas a temas de computação. <br>
 Para cada questão errada, o jogador perde vida.
-Se chegar ao final sem morrer, vence o jogo e o inimigo, que faz as perguntas, é derrotado. <br>
+Se chegar ao final sem morrer, vence o jogo; e o inimigo, que faz as perguntas, é derrotado. <br>
 O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de programação.
 
 # Processo de desenvolvimento 🛠️:
@@ -44,6 +44,7 @@ Diminui o tamanho da fonte do texto. <br>
 
 ## 08/11:
 Adicionei uma música de fundo que fica em loop durante o jogo. <br>
+Adicionei uma barra para informar a vida do personagem. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
@@ -63,23 +64,26 @@ cd game && make start # para abrir o servidor
 TODO
 
 # Referências e créditos 📚:
+## Assets:
+1. Game Art 2D. THE KNIGHT - FREE SPRITES. <https://www.gameart2d.com/the-knight-free-sprites.html>
+2. itch.io. Wizard Pack by LuizMelo. <https://luizmelo.itch.io/wizard-pack>
+3. Video Cartoon Background at Amelie Challis blog. <https://storage.googleapis.com/dztonjyhtatade/video-cartoon-background.html>
+4. Rock Of Ages 2 OST. Of windmills & giants. <https://youtu.be/wupxR0Gjaj0>
+
+## Pesquisa:
 1. LibGDX. <https://libgdx.com/>
-2. Game Art 2D. THE KNIGHT - FREE SPRITES. <https://www.gameart2d.com/the-knight-free-sprites.html>
-3. Raizensoft. How to create animations from spritesheets in libGDX. <https://raizensoft.com/tutorial/create-animation-spritesheet-libgdx/>
-4. LibGDX. 2D Animation. <https://libgdx.com/wiki/graphics/2d/2d-animation>
-5. itch.io. Wizard Pack by LuizMelo. <https://luizmelo.itch.io/wizard-pack>
-6. Stack Overflow. Changing image size in Markdown. <https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown>
-7. Stack Overflow. Libgdx How Do I display Text? <https://stackoverflow.com/questions/38644099/libgdx-how-do-i-display-text>
-8. LibGDX.info. Label & Font Basic. <https://libgdxinfo.wordpress.com/basic-label/>
-9. CodingTechRoom. How to Display Text in LibGDX? <https://codingtechroom.com/question/-libgdx-display-text>
-10. Infoupdate.org. Cartoon Images Hd Free. <https://infoupdate.org/cartoon-images-hd-free/>
-11. Video Cartoon Background at Amelie Challis blog. <https://storage.googleapis.com/dztonjyhtatade/video-cartoon-background.html>
-12. Stack Overflow. libGdx - image background. <https://stackoverflow.com/questions/17623373/libgdx-image-background>
-13. CodingTechRoom. How to set a background image in LibGDX using FitViewPort. <https://codingtechroom.com/question/set-background-image-libgdx-fitviewport>
-14. Game Development. How to load background image in sprite class in libgdx? <https://gamedev.stackexchange.com/questions/137632/how-to-load-background-image-in-sprite-class-in-libgdx>
-15. Stack Overflow. How to Parse this JSON with LibGDX. <https://stackoverflow.com/questions/35343727/how-to-parse-this-json-with-libgdx>
-16. Raizensoft. How to use JSON with libGDX. <https://raizensoft.com/tutorial/parse-json-libgdx/>
-17. LibGDX. Reading and writing JSON. <https://libgdx.com/wiki/utils/reading-and-writing-json>
-18. LibGDX. Streaming music. <https://libgdx.com/wiki/audio/streaming-music>
-19. Stack Overflow. How to play music in loop in libgdx? <https://stackoverflow.com/questions/27767121/how-to-play-music-in-loop-in-libgdx>
-20. Rock Of Ages 2 OST. Of windmills & giants. <https://youtu.be/wupxR0Gjaj0>
+2. Raizensoft. How to create animations from spritesheets in libGDX. <https://raizensoft.com/tutorial/create-animation-spritesheet-libgdx/>
+3. LibGDX. 2D Animation. <https://libgdx.com/wiki/graphics/2d/2d-animation>
+4. Stack Overflow. Changing image size in Markdown. <https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown>
+5. Stack Overflow. Libgdx How Do I display Text? <https://stackoverflow.com/questions/38644099/libgdx-how-do-i-display-text>
+6. LibGDX.info. Label & Font Basic. <https://libgdxinfo.wordpress.com/basic-label/>
+7. CodingTechRoom. How to Display Text in LibGDX? <https://codingtechroom.com/question/-libgdx-display-text>
+8. Infoupdate.org. Cartoon Images Hd Free. <https://infoupdate.org/cartoon-images-hd-free/>
+9. Stack Overflow. libGdx - image background. <https://stackoverflow.com/questions/17623373/libgdx-image-background>
+10. CodingTechRoom. How to set a background image in LibGDX using FitViewPort. <https://codingtechroom.com/question/set-background-image-libgdx-fitviewport>
+11. Game Development. How to load background image in sprite class in libgdx? <https://gamedev.stackexchange.com/questions/137632/how-to-load-background-image-in-sprite-class-in-libgdx>
+12. Stack Overflow. How to Parse this JSON with LibGDX. <https://stackoverflow.com/questions/35343727/how-to-parse-this-json-with-libgdx>
+13. Raizensoft. How to use JSON with libGDX. <https://raizensoft.com/tutorial/parse-json-libgdx/>
+14. LibGDX. Reading and writing JSON. <https://libgdx.com/wiki/utils/reading-and-writing-json>
+15. LibGDX. Streaming music. <https://libgdx.com/wiki/audio/streaming-music>
+16. Stack Overflow. How to play music in loop in libgdx? <https://stackoverflow.com/questions/27767121/how-to-play-music-in-loop-in-libgdx>
