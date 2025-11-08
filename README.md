@@ -17,7 +17,7 @@ desenhado com um animation sprite. <br>
 Baixei as imagens do site gameart2d.com. <br>
 Depois, troquei o nome da classe Knight para Character, para poder reaproveitá-la. <br>
 Então, criei o personagem wizard, que será o personagem que fará as perguntas. <br>
-<img src="images/10-31.png" alt="10-31" width="512"/>
+<img src="images/10-31.png" alt="10-31" width="256"/>
 
 ### 01/11:
 Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar quando for implementá-las. <br>
@@ -26,7 +26,7 @@ Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar
 Corrigi a textura do mago que estava invertida e fora do lugar. <br>
 Configurei o makefile para por padrão testar a versão desktop, que é mais rápida para compilar. <br>
 Adicionei um text label no topo da tela com o nome do jogo. <br>
-<img src="images/11-02.png" alt="11-02" width="384"/>
+<img src="images/11-02.png" alt="11-02" width="196"/>
 
 ### 03/11:
 Separei o programa em funções menores e crei classes para o cavaleiro e o mago. <br>
@@ -42,6 +42,9 @@ Adicionei uma imagem de fundo. Baixei a imagem do site infoupdate.org. <br>
 Diminui o tamanho da fonte do texto. <br>
 <img src="images/11-06.png" alt="11-06" width="256"/>
 
+## 08/11:
+Adicionei uma música de fundo que fica em loop durante o jogo. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -50,9 +53,10 @@ Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele an
 TODO
 
 # Orientações para execução 🖥️:
-É necessário ter o Java JDK instalado apenas.
+É necessário ter o Java JDK instalado apenas. <br>
+Na versão web, se estiver no firefox, é necessário ir na aba de permissões do site e selecionar "permitir áudio e vídeo", se não a música de fundo não toca. <br>
 ```shell
-cd game && ./gradlew html:superDev
+cd game && make start # para abrir o servidor
 ```
 
 # Resultado final 📊:
@@ -76,3 +80,6 @@ TODO
 15. Stack Overflow. How to Parse this JSON with LibGDX. <https://stackoverflow.com/questions/35343727/how-to-parse-this-json-with-libgdx>
 16. Raizensoft. How to use JSON with libGDX. <https://raizensoft.com/tutorial/parse-json-libgdx/>
 17. LibGDX. Reading and writing JSON. <https://libgdx.com/wiki/utils/reading-and-writing-json>
+18. LibGDX. Streaming music. <https://libgdx.com/wiki/audio/streaming-music>
+19. Stack Overflow. How to play music in loop in libgdx? <https://stackoverflow.com/questions/27767121/how-to-play-music-in-loop-in-libgdx>
+20. Rock Of Ages 2 OST. Of windmills & giants. <https://youtu.be/wupxR0Gjaj0>
