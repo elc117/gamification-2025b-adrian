@@ -46,6 +46,10 @@ Diminui o tamanho da fonte do texto. <br>
 Adicionei uma música de fundo que fica em loop durante o jogo. <br>
 Adicionei uma barra para informar a vida do personagem. <br>
 
+## 09/11:
+As respostas passarão a ser armazenadas em um arquivo '.dat', para não serem facilmente legíveis fora do programa. <br>
+Cada byte do arquivo é a resposta de uma questão. Para editar o arquivo, pode-se usar a extensão "Hex Editor" do vscode, por exemplo. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -89,3 +93,5 @@ TODO
 16. Stack Overflow. How to play music in loop in libgdx? <https://stackoverflow.com/questions/27767121/how-to-play-music-in-loop-in-libgdx>
 17. LibGDX. Logging. <https://libgdx.com/wiki/app/logging>
 18. GeeksForGeeks. UML Class Diagram. <https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-class-diagrams/>
+19. GeeksForGeeks. How to Read and Write Binary Files in Java? <https://www.geeksforgeeks.org/java/how-to-read-and-write-binary-files-in-java/>
+20. GeeksForGeeks. Different ways of Reading a text file in Java. <https://www.geeksforgeeks.org/java/different-ways-reading-text-file-java/>
