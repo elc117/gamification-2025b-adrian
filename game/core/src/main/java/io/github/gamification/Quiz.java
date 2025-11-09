@@ -5,6 +5,9 @@ import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 import com.badlogic.gdx.Gdx;
 
+import java.io.InputStream;
+import java.io.FileInputStream;
+
 public class Quiz {
 	private Question[] questions;
 
@@ -12,6 +15,7 @@ public class Quiz {
 		// Load JSON from given path (relative path inside assets folder)
 		try {
 			JsonValue questionsJson = getJsonQuestions(jsonFilePath);
+			InputStream answersFile = new FileInputStream(Gdx.files.internal("data/answers.dat").file());
 
 			// get questions array
 			this.questions = new Question[questionsJson.size];
@@ -33,7 +37,7 @@ public class Quiz {
 					optionsArray = new String[0];
 				}
 
-				int answer = question.getInt("answer", 0);
+				byte answer = (byte) answersFile.read(); // read the answer from the binary file
 				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer);
 			}
 
