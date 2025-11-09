@@ -29,9 +29,8 @@ public class Quiz {
 						optionsArray[optionIndex++] = option.asString();
 					}
 				} else {
-					System.out.printf("ERROR: question '%s' has no options defined.\n", questionText);
+					Gdx.app.log("error", "Question '" + questionText + "' has no options defined.");
 					optionsArray = new String[0];
-					System.exit(1);
 				}
 
 				int answer = question.getInt("answer", 0);
@@ -39,8 +38,7 @@ public class Quiz {
 			}
 
 		} catch (Exception e) {
-			System.out.printf("ERROR: Failed to load quiz from %s: %s\n", jsonFilePath, e.getMessage());
-			System.exit(1);
+			Gdx.app.log("error", "Failed to load quiz from '" + jsonFilePath + "': " + e.getMessage());
 		}
 	}
 
@@ -51,28 +49,26 @@ public class Quiz {
 	public void debug() {
 		Question[] questions = getQuestions();
         for (Question q : questions) {
-            System.out.println("Question: " + q.getQuestion());
+            Gdx.app.debug("debug", "Question: " + q.getQuestion());
             String[] options = q.getOptions();
             for (int i = 0; i < options.length; i++) {
-                System.out.printf("  Option %d: %s\n", i + 1, options[i]);
+				Gdx.app.debug("debug", "\tOption " + (i + 1) + ": " + options[i]);
             }
-            System.out.println("  Answer: Option " + (q.getAnswer() + 1));
+			Gdx.app.debug("debug", "\tAnswer: Option " + (q.getAnswer() + 1));
         }
 	}
 
 	private JsonValue getJsonQuestions(String jsonFilePath) {
 		FileHandle jsonFile = Gdx.files.internal(jsonFilePath);
 		if (!jsonFile.exists()) {
-			System.out.printf("Quiz JSON file not found: %s\n", jsonFilePath);
-			System.exit(1);
+			Gdx.app.log("error", "Quiz JSON file not found: " + jsonFilePath);
 		}
 
 		JsonReader jsonReader = new JsonReader();
 		JsonValue parsedJson = jsonReader.parse(jsonFile); // parses the JSON content
 		JsonValue questionsJson = parsedJson.get("questions"); // get the questions JSON array
 		if (questionsJson == null) {
-			System.out.printf("Quiz JSON does not contain 'questions' array: %s\n", jsonFilePath);
-			System.exit(1);
+			Gdx.app.log("error", "Quiz JSON does not contain 'questions' array: " + jsonFilePath);
 		}
 
 		return questionsJson;

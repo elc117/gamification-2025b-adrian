@@ -1,5 +1,7 @@
 package io.github.gamification;
 
+import com.badlogic.gdx.Gdx;
+
 public class Question {
 	private String question;
 	private String[] options;
@@ -11,8 +13,7 @@ public class Question {
 		if (answer < options.length)
 			this.answer = answer;
 		else {
-			System.out.printf("Error: answer of question was set as %d, but only %d options were given. Aborting...\n", answer + 1, options.length);
-			System.exit(1);
+			Gdx.app.log("error", "Answer of question was set as " + (answer + 1) + ", but only " + options.length + " options were given.");
 		}
 	}
 
