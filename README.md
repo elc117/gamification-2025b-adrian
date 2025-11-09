@@ -87,3 +87,4 @@ TODO
 14. LibGDX. Reading and writing JSON. <https://libgdx.com/wiki/utils/reading-and-writing-json>
 15. LibGDX. Streaming music. <https://libgdx.com/wiki/audio/streaming-music>
 16. Stack Overflow. How to play music in loop in libgdx? <https://stackoverflow.com/questions/27767121/how-to-play-music-in-loop-in-libgdx>
+17. LibGDX. Logging. <https://libgdx.com/wiki/app/logging>
