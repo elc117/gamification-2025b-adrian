@@ -26,15 +26,17 @@ public class FirstScreen implements Screen {
     // Title of the game
     private BitmapFont font;
     private GlyphLayout titleLayout;
-    private String title = "Programming Quest";
+    private final String title = "Programming Quest";
 
     // Game soundtrack that will play in loop
     private Music soundtrack;
 
+    // The quiz object that will contain all the questions and answers
+    private final Quiz quiz = new Quiz("data/quiz.json");
+
     @Override
     public void show() {
         batch = new SpriteBatch();
-
         initCamera();
         backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
