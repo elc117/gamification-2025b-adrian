@@ -49,12 +49,12 @@ public class Quiz {
 	public void debug() {
 		Question[] questions = getQuestions();
         for (Question q : questions) {
-            Gdx.app.debug("debug", "Question: " + q.getQuestion());
+            Gdx.app.log("debug", "Question: " + q.getQuestion());
             String[] options = q.getOptions();
             for (int i = 0; i < options.length; i++) {
-				Gdx.app.debug("debug", "\tOption " + (i + 1) + ": " + options[i]);
+				Gdx.app.log("debug", "\tOption " + (i + 1) + ": " + options[i]);
             }
-			Gdx.app.debug("debug", "\tAnswer: Option " + (q.getAnswer() + 1));
+			Gdx.app.log("debug", "\tAnswer: Option " + (q.getAnswer() + 1));
         }
 	}
 
