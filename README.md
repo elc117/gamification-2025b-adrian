@@ -99,3 +99,5 @@ TODO
 18. GeeksForGeeks. UML Class Diagram. <https://www.geeksforgeeks.org/system-design/unified-modeling-language-uml-class-diagrams/>
 19. GeeksForGeeks. How to Read and Write Binary Files in Java? <https://www.geeksforgeeks.org/java/how-to-read-and-write-binary-files-in-java/>
 20. GeeksForGeeks. Different ways of Reading a text file in Java. <https://www.geeksforgeeks.org/java/different-ways-reading-text-file-java/>
+21. LibGDX. File handling. <https://libgdx.com/wiki/file-handling>
+22. JavaDocs. FileHandle - gdx 1.14.0 <https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/files/FileHandle.html>
