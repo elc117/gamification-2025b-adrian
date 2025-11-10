@@ -50,6 +50,10 @@ Adicionei uma barra para informar a vida do personagem. <br>
 As respostas passarão a ser armazenadas em um arquivo '.dat', para não serem facilmente legíveis fora do programa. <br>
 Cada byte do arquivo é a resposta de uma questão. Para editar o arquivo, pode-se usar a extensão "Hex Editor" do vscode, por exemplo. <br>
 
+## 10/11:
+Consertei um problema causado pelas mudanças de ontem. <br>
+Estava usando o leitor de arquivos padrão do java, que tem compatibilidade limitada com o LibGDX, então troquei pelo leitor nativo do GDX. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
