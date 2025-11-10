@@ -36,6 +36,7 @@ public class FirstScreen implements Screen {
 
     @Override
     public void show() {
+        quiz.debug();
         batch = new SpriteBatch();
         initCamera();
         backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
