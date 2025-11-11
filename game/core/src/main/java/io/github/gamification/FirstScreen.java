@@ -42,8 +42,8 @@ public class FirstScreen implements Screen {
     private GlyphLayout questionLayout;
 
     // Layout constants
-    private static final float BUTTON_WIDTH = 520f;
-    private static final float BUTTON_HEIGHT = 48f;
+    private static final float BUTTON_WIDTH = 512f;
+    private static final float BUTTON_HEIGHT = 40f;
     private static final float BUTTON_PADDING = 12f;
 
     private int currentQuestionIndex = 0;
@@ -119,14 +119,19 @@ public class FirstScreen implements Screen {
 
             // Draw option backgrounds with ShapeRenderer
             shapeRenderer.setProjectionMatrix(camera.combined);
+            // Enable alpha blending so the renderer respects the alpha component
+            Gdx.gl.glEnable(GL20.GL_BLEND);
+            Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
             shapeRenderer.begin(ShapeType.Filled);
             for (int i = 0; i < optionRects.length; i++) {
                 Rectangle r = optionRects[i];
-                // light background for buttons
+                // light background for buttons (uses alpha for translucency)
                 shapeRenderer.setColor(0.16f, 0.16f, 0.16f, 0.5f); // slight dark gray, translucent
                 shapeRenderer.rect(r.x, r.y, r.width, r.height);
             }
             shapeRenderer.end();
+            // Optional: disable blending to restore state
+            Gdx.gl.glDisable(GL20.GL_BLEND);
 
             // Draw question and option text on top
             batch.begin();
