@@ -54,6 +54,11 @@ Cada byte do arquivo é a resposta de uma questão. Para editar o arquivo, pode-
 Consertei um problema causado pelas mudanças de ontem. <br>
 Estava usando o leitor de arquivos padrão do java, que tem compatibilidade limitada com o LibGDX, então troquei pelo leitor nativo do GDX. <br>
 
+## 11/11:
+Agora que a parte inicial já está pronta, finalmente implementei o quiz em si. <br>
+O player clica nos botões, e no final é exibida a pontuação total. <br>
+<img src="images/11-11.png" alt="11-11" width="512"/>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -101,3 +106,4 @@ TODO
 20. GeeksForGeeks. Different ways of Reading a text file in Java. <https://www.geeksforgeeks.org/java/different-ways-reading-text-file-java/>
 21. LibGDX. File handling. <https://libgdx.com/wiki/file-handling>
 22. JavaDocs. FileHandle - gdx 1.14.0 <https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/files/FileHandle.html>
+23. CodingTechRoom. How to Create a Button Using LibGDX. <https://codingtechroom.com/question/create-button-libgdx>
