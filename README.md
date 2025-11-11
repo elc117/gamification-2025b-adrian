@@ -70,7 +70,7 @@ Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele an
 É necessário ter o Java JDK instalado apenas. <br>
 Na versão web, se estiver no firefox, é necessário ir na aba de permissões do site e selecionar "permitir áudio e vídeo", se não a música de fundo não toca. <br>
 ```shell
-cd game && make start # para abrir o servidor
+cd game && ./gradlew html:superDev # para abrir o servidor
 ```
 
 # Resultado final 📊:
@@ -107,3 +107,4 @@ TODO
 21. LibGDX. File handling. <https://libgdx.com/wiki/file-handling>
 22. JavaDocs. FileHandle - gdx 1.14.0 <https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/files/FileHandle.html>
 23. CodingTechRoom. How to Create a Button Using LibGDX. <https://codingtechroom.com/question/create-button-libgdx>
+24. LibGDX. Deploying your application - Deploy Web. <https://libgdx.com/wiki/deployment/deploying-your-application#deploy-web>
