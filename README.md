@@ -1,12 +1,11 @@
 # Identificação 🪪:
-Nome:  Adrian Bellé Secretti <br>
-Curso: Sistemas de Informação
+Adrian, Sistemas de Informação
 
 # Proposta 📄:
 Este é um jogo web/desktop feito na biblioteca LibGDX em Java.
 Se trata de um quiz com perguntas relacionadas a temas de computação. <br>
-Para cada questão errada, o jogador perde vida.
-Se chegar ao final sem morrer, vence o jogo; e o inimigo, que faz as perguntas, é derrotado. <br>
+Para cada questão errada, o jogador perde dois de vida, e para cada certa, recupera um de vida. <br>
+Se chegar ao final sem morrer, vence o jogo, e o inimigo, que faz as perguntas, é derrotado. <br>
 O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de programação.
 
 # Processo de desenvolvimento 🛠️:
@@ -68,10 +67,21 @@ Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele an
 
 # Orientações para execução 🖥️:
 É necessário ter o Java JDK instalado apenas. <br>
-Na versão web, se estiver no firefox, é necessário ir na aba de permissões do site e selecionar "permitir áudio e vídeo", se não a música de fundo não toca. <br>
+## Versão Desktop:
 ```shell
-cd game && ./gradlew html:superDev # para abrir o servidor
+cd game && ./gradlew run
 ```
+## Versão Web:
+### Teste:
+```shell
+cd game && ./gradlew html:superDev
+```
+### Distribuição:
+```shell
+cd game && ./gradlew html:dist
+```
+### Observação:
+Se estiver no firefox, é necessário ir na aba de permissões do site e selecionar "permitir áudio e vídeo", se não a música de fundo não toca. <br>
 
 # Resultado final 📊:
 TODO
