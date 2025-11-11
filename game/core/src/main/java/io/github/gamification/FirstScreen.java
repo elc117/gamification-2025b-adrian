@@ -9,8 +9,11 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector3;
 
-/** First screen of the application. Displays a centered idle animation (character does not move). */
 public class FirstScreen implements Screen {
     // Screen configuration
     private SpriteBatch batch;
@@ -20,7 +23,7 @@ public class FirstScreen implements Screen {
     private Texture backgroundTexture;
 
     // Characters of the game
-    private Character knight;
+    private Knight knight;
     private Character wizard;
 
     // Title of the game
@@ -34,9 +37,20 @@ public class FirstScreen implements Screen {
     // The quiz object that will contain all the questions and answers
     private final Quiz quiz = new Quiz("data/quiz.json");
 
+    // UI helpers for quiz
+    private ShapeRenderer shapeRenderer;
+    private GlyphLayout questionLayout;
+
+    // Layout constants
+    private static final float BUTTON_WIDTH = 520f;
+    private static final float BUTTON_HEIGHT = 48f;
+    private static final float BUTTON_PADDING = 12f;
+
+    private int currentQuestionIndex = 0;
+    private boolean quizFinished = false;
+
     @Override
     public void show() {
-        quiz.debug();
         batch = new SpriteBatch();
         initCamera();
         backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
@@ -44,6 +58,8 @@ public class FirstScreen implements Screen {
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
         initTitle();
         playSoundtrack();
+        shapeRenderer = new ShapeRenderer();
+        questionLayout = new GlyphLayout();
     }
 
     @Override
@@ -54,14 +70,93 @@ public class FirstScreen implements Screen {
         clear();
         renderCamera();
 
+        // Draw background and characters
         batch.begin();
-
         batch.draw(backgroundTexture, 0, 0, camera.viewportWidth, camera.viewportHeight);
         knight.render(batch);
         wizard.render(batch);
         renderTitle();
-
         batch.end();
+
+        // Get questions
+        Question[] questions = quiz.getQuestions();
+        if (questions == null) return;
+
+        if (currentQuestionIndex >= questions.length) {
+            quizFinished = true;
+        }
+
+        if (!quizFinished) {
+            Question question = questions[currentQuestionIndex];
+            String[] options = question.getOptions();
+
+            // Build button rectangles for options
+            Rectangle[] optionRects = new Rectangle[options.length];
+            float startX = camera.viewportWidth / 2f - BUTTON_WIDTH / 2f; // centered
+            float startY = camera.viewportHeight - 120f; // below title
+
+            for (int i = 0; i < options.length; i++) {
+                float y = startY - i * (BUTTON_HEIGHT + BUTTON_PADDING) - BUTTON_HEIGHT;
+                optionRects[i] = new Rectangle(startX, y, BUTTON_WIDTH, BUTTON_HEIGHT);
+            }
+
+            // Handle input (touch/click)
+            if (Gdx.input.justTouched()) {
+                Vector3 touch = new Vector3(Gdx.input.getX(), Gdx.input.getY(), 0);
+                camera.unproject(touch);
+                for (int i = 0; i < optionRects.length; i++) {
+                    if (optionRects[i].contains(touch.x, touch.y)) {
+                        // check answer
+                        if (i == question.getAnswer()) {
+                            knight.incrementScore();
+                        }
+                        // advance to next question
+                        currentQuestionIndex++;
+                        break;
+                    }
+                }
+            }
+
+            // Draw option backgrounds with ShapeRenderer
+            shapeRenderer.setProjectionMatrix(camera.combined);
+            shapeRenderer.begin(ShapeType.Filled);
+            for (int i = 0; i < optionRects.length; i++) {
+                Rectangle r = optionRects[i];
+                // light background for buttons
+                shapeRenderer.setColor(0.16f, 0.16f, 0.16f, 0.5f); // slight dark gray, translucent
+                shapeRenderer.rect(r.x, r.y, r.width, r.height);
+            }
+            shapeRenderer.end();
+
+            // Draw question and option text on top
+            batch.begin();
+            // Question text
+            questionLayout.setText(font, question.getQuestion());
+            float qx = camera.viewportWidth / 2f - questionLayout.width / 2f; // centered
+            float qy = camera.viewportHeight - 80f;
+            font.draw(batch, questionLayout, qx, qy);
+
+            // Options text
+            for (int i = 0; i < options.length; i++) {
+                Rectangle r = optionRects[i];
+                GlyphLayout optLayout = new GlyphLayout(font, options[i]);
+                float textX = r.x + 12f;
+                float textY = r.y + r.height - 12f; // slightly inset from top of button
+                font.draw(batch, optLayout, textX, textY);
+            }
+            batch.end();
+
+        } else {
+            // Quiz finished - show final score out of total questions
+            String scoreText = "Quiz finished! Your score: " + knight.getScore() + "/" + questions.length;
+            GlyphLayout scoreLayout = new GlyphLayout(font, scoreText);
+            float sx = camera.viewportWidth / 2f - scoreLayout.width / 2f;
+            float sy = camera.viewportHeight / 2f + scoreLayout.height / 2f;
+
+            batch.begin();
+            font.draw(batch, scoreLayout, sx, sy);
+            batch.end();
+        }
     }
 
     @Override
@@ -95,6 +190,7 @@ public class FirstScreen implements Screen {
         if (knight != null) knight.dispose();
         if (wizard != null) wizard.dispose();
         if (font != null) font.dispose();
+        if (shapeRenderer != null) shapeRenderer.dispose();
     }
 
     // My custom functions
@@ -129,7 +225,7 @@ public class FirstScreen implements Screen {
 
     private void playSoundtrack() {
         soundtrack = Gdx.audio.newMusic(Gdx.files.internal("audio/soundtrack.ogg"));
-        soundtrack.setVolume(0.4f);
+        soundtrack.setVolume(0.5f);
         soundtrack.setLooping(true);
         soundtrack.play();
     }

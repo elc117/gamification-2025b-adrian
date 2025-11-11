@@ -14,6 +14,15 @@ public class Knight extends Character {
 		this.healthBar = new HealthBar(this.health, 96f, 10f, 8f);
 	}
 
+	// Score API so other classes (screens, UI) can update or read the player's score
+	public int getScore() {
+		return score;
+	}
+
+	public void incrementScore() {
+		this.score++;
+	}
+
 	@Override
 	public void render(SpriteBatch batch) {
 		super.render(batch);
