@@ -96,35 +96,10 @@ public class FirstScreen implements Screen {
             String[] options = question.getOptions();
 
             // Build button rectangles for options
-            Rectangle[] optionRects = new Rectangle[options.length];
-            float startX = camera.viewportWidth / 2f - BUTTON_WIDTH / 2f; // centered
-            float startY = camera.viewportHeight - 128f; // below title
-
-            for (int i = 0; i < options.length; i++) {
-                float y = startY - i * (BUTTON_HEIGHT + BUTTON_PADDING) - BUTTON_HEIGHT;
-                optionRects[i] = new Rectangle(startX, y, BUTTON_WIDTH, BUTTON_HEIGHT);
-            }
+            Rectangle[] optionRects = buildOptionButtons(options.length);
 
             // Handle input (touch/click)
-            if (Gdx.input.justTouched()) {
-                Vector3 touch = new Vector3(Gdx.input.getX(), Gdx.input.getY(), 0);
-                camera.unproject(touch);
-                for (int i = 0; i < optionRects.length; i++) {
-                    if (optionRects[i].contains(touch.x, touch.y)) {
-                        // if answer is right, increment score and health
-                        if (i == question.getAnswer()) {
-                            knight.incrementScore();
-                            knight.heal();
-                        }
-                        else {
-                            knight.damage();
-                        }
-                        // advance to next question
-                        currentQuestionIndex++;
-                        break;
-                    }
-                }
-            }
+            handleAnswer(optionRects, question);
 
             // Draw option backgrounds with ShapeRenderer
             shapeRenderer.setProjectionMatrix(camera.combined);
@@ -161,15 +136,7 @@ public class FirstScreen implements Screen {
             batch.end();
 
         } else {
-            // Quiz finished - show final score out of total questions
-            String scoreText = "Game Over! Your score: " + knight.getScore() + "/" + questions.length;
-            GlyphLayout scoreLayout = new GlyphLayout(font, scoreText);
-            float sx = camera.viewportWidth / 2f - scoreLayout.width / 2f;
-            float sy = camera.viewportHeight / 2f + scoreLayout.height / 2f;
-
-            batch.begin();
-            font.draw(batch, scoreLayout, sx, sy);
-            batch.end();
+            endGame();
         }
     }
 
@@ -242,5 +209,52 @@ public class FirstScreen implements Screen {
         soundtrack.setVolume(0.5f);
         soundtrack.setLooping(true);
         soundtrack.play();
+    }
+
+    private Rectangle[] buildOptionButtons(int numOptions) {
+        Rectangle[] optionRects = new Rectangle[numOptions];
+        float startX = camera.viewportWidth / 2f - BUTTON_WIDTH / 2f; // centered
+        float startY = camera.viewportHeight - 128f; // below title
+
+        for (int i = 0; i < numOptions; i++) {
+            float y = startY - i * (BUTTON_HEIGHT + BUTTON_PADDING) - BUTTON_HEIGHT;
+            optionRects[i] = new Rectangle(startX, y, BUTTON_WIDTH, BUTTON_HEIGHT);
+        }
+
+        return optionRects;
+    }
+
+    private void handleAnswer(Rectangle[] optionRects, Question question) {
+        if (Gdx.input.justTouched()) {
+            Vector3 touch = new Vector3(Gdx.input.getX(), Gdx.input.getY(), 0);
+            camera.unproject(touch);
+            for (int i = 0; i < optionRects.length; i++) {
+                if (optionRects[i].contains(touch.x, touch.y)) {
+                    // if answer is right, increment score and health
+                    if (i == question.getAnswer()) {
+                        knight.incrementScore();
+                        knight.heal();
+                    }
+                    else {
+                        knight.damage();
+                    }
+                    // advance to next question
+                    currentQuestionIndex++;
+                    break;
+                }
+            }
+        }
+    }
+
+    private void endGame() {
+        // Quiz finished - show final score out of total questions
+        String scoreText = "Game Over! Your score: " + knight.getScore() + "/" + quiz.getQuestions().length;
+        GlyphLayout scoreLayout = new GlyphLayout(font, scoreText);
+        float sx = camera.viewportWidth / 2f - scoreLayout.width / 2f;
+        float sy = camera.viewportHeight / 2f + scoreLayout.height / 2f;
+
+        batch.begin();
+        font.draw(batch, scoreLayout, sx, sy);
+        batch.end();
     }
 }
