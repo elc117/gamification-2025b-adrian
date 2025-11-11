@@ -29,9 +29,7 @@ public class Character {
     public Character(float centerX, float centerY, float width, float height, String assetPath, int frameCount) {
         this.width = width;
         this.height = height;
-        this.x = centerX - width / 2f;
-        this.y = centerY - height / 2f;
-
+        this.setCenter(centerX, centerY);
         this.frameCount = frameCount;
         this.frameDuration = 1f / frameCount;
 
@@ -67,6 +65,15 @@ public class Character {
     public void render(SpriteBatch batch) {
         TextureRegion current = animation.getKeyFrame(stateTime, true);
         batch.draw(current, x, y, width, height);
+    }
+
+    /**
+     * Reposition the character so its center is at (centerX, centerY).
+     * Useful when the viewport changes size and characters must be kept in corners.
+     */
+    public void setCenter(float centerX, float centerY) {
+        this.x = centerX - width / 2f;
+        this.y = centerY - height / 2f;
     }
 
     public void dispose() {

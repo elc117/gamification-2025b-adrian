@@ -10,12 +10,11 @@ public class Knight extends Character {
 
 	public Knight(float centerX, float centerY) {
 		super(centerX, centerY, 128, 128, "texture/knight", 10); // creates a new 128x128 character with the "knight" animation sprite with 10 frames
-		this.health = MAX_HEALTH; // initial health
-		this.score = 0; // amount of questions answered right
+		this.health = MAX_HEALTH;
+		this.score = 0;
 		this.healthBar = new HealthBar(this.health, 96f, 10f, 8f);
 	}
 
-	// Score API so other classes (screens, UI) can update or read the player's score
 	public int getScore() {
 		return score;
 	}

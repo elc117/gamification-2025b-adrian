@@ -14,7 +14,10 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
-public class FirstScreen implements Screen {
+/*
+* This is the main screen of the game.
+*/
+public class GameScreen implements Screen {
     // Screen configuration
     private SpriteBatch batch;
     private OrthographicCamera camera;
@@ -53,9 +56,11 @@ public class FirstScreen implements Screen {
     public void show() {
         batch = new SpriteBatch();
         initCamera();
+
         backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
+
         initTitle();
         playSoundtrack();
         shapeRenderer = new ShapeRenderer();
@@ -147,6 +152,14 @@ public class FirstScreen implements Screen {
         if (width <= 0 || height <= 0) return;
 
         camera.setToOrtho(false, width, height); // Update camera with new size
+
+        // Reposition characters so they remain anchored to the corners after a resize
+        if (knight != null) {
+            knight.setCenter(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
+        }
+        if (wizard != null) {
+            wizard.setCenter(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
+        }
     }
 
     @Override
