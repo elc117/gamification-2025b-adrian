@@ -3,13 +3,14 @@ package io.github.gamification;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Knight extends Character {
+	private static final int MAX_HEALTH = 10;
 	private int health;
 	private int score;
 	private HealthBar healthBar;
 
 	public Knight(float centerX, float centerY) {
 		super(centerX, centerY, 128, 128, "texture/knight", 10); // creates a new 128x128 character with the "knight" animation sprite with 10 frames
-		this.health = 10; // initial health
+		this.health = MAX_HEALTH; // initial health
 		this.score = 0; // amount of questions answered right
 		this.healthBar = new HealthBar(this.health, 96f, 10f, 8f);
 	}
@@ -21,6 +22,21 @@ public class Knight extends Character {
 
 	public void incrementScore() {
 		this.score++;
+	}
+
+	public int getHealth() {
+		return health;
+	}
+
+	public void heal() {
+		if (health < MAX_HEALTH) this.health++;
+	}
+
+	public void damage() {
+		if (this.health >= 2)
+			this.health -= 2;
+		else
+			this.health = 0;
 	}
 
 	@Override

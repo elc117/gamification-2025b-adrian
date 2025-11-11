@@ -78,6 +78,11 @@ public class FirstScreen implements Screen {
         renderTitle();
         batch.end();
 
+        // If player is dead
+        if (knight.getHealth() == 0) {
+            quizFinished = true;
+        }
+
         // Get questions
         Question[] questions = quiz.getQuestions();
         if (questions == null) return;
@@ -106,9 +111,13 @@ public class FirstScreen implements Screen {
                 camera.unproject(touch);
                 for (int i = 0; i < optionRects.length; i++) {
                     if (optionRects[i].contains(touch.x, touch.y)) {
-                        // check answer
+                        // if answer is right, increment score and health
                         if (i == question.getAnswer()) {
                             knight.incrementScore();
+                            knight.heal();
+                        }
+                        else {
+                            knight.damage();
                         }
                         // advance to next question
                         currentQuestionIndex++;
@@ -153,7 +162,7 @@ public class FirstScreen implements Screen {
 
         } else {
             // Quiz finished - show final score out of total questions
-            String scoreText = "Quiz finished! Your score: " + knight.getScore() + "/" + questions.length;
+            String scoreText = "Game Over! Your score: " + knight.getScore() + "/" + questions.length;
             GlyphLayout scoreLayout = new GlyphLayout(font, scoreText);
             float sx = camera.viewportWidth / 2f - scoreLayout.width / 2f;
             float sy = camera.viewportHeight / 2f + scoreLayout.height / 2f;
