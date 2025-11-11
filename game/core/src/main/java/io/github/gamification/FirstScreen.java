@@ -42,7 +42,7 @@ public class FirstScreen implements Screen {
     private GlyphLayout questionLayout;
 
     // Layout constants
-    private static final float BUTTON_WIDTH = 512f;
+    private static final float BUTTON_WIDTH = 768f;
     private static final float BUTTON_HEIGHT = 40f;
     private static final float BUTTON_PADDING = 12f;
 
@@ -98,7 +98,7 @@ public class FirstScreen implements Screen {
             // Build button rectangles for options
             Rectangle[] optionRects = new Rectangle[options.length];
             float startX = camera.viewportWidth / 2f - BUTTON_WIDTH / 2f; // centered
-            float startY = camera.viewportHeight - 120f; // below title
+            float startY = camera.viewportHeight - 128f; // below title
 
             for (int i = 0; i < options.length; i++) {
                 float y = startY - i * (BUTTON_HEIGHT + BUTTON_PADDING) - BUTTON_HEIGHT;
