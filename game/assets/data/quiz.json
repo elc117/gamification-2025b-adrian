@@ -56,7 +56,7 @@
 				"Domain Name System",
 				"Data Network Service",
 				"Digital Numbering System",
-				"Deviated Nasal Septum",
+				"Dangerous Nuclear Substances",
 				"Distributed Network Security"
 			]
 		},
@@ -104,14 +104,14 @@
 			"question": "What is a 'syscall'?",
 			"options": [
 				"A type of malware that infects system files by calling them multiple times",
-				"A command used to make calls using a SIM card",
+				"A system used to make calls using a SIM card",
 				"A software to call system administrators for help",
-				"A network protocol for secure communication between systems",
+				"A network protocol for making secure calls between systems",
 				"A system call that allows programs to request services from the operating system"
 			]
 		},
 		{
-			"question": "A <answer> creates a secure connection between your device and the internet, encrypting your data and masking your IP address. This helps protect your privacy online and allows you to access restricted content.",
+			"question": "A <answer> creates a secure connection between your device and the internet, encrypting your data and masking your IP address.",
 			"options": [
 				"Firewall",
 				"Proxy",
@@ -128,6 +128,26 @@
 				"Hosting information about historic facts related to pirates",
 				"Being a popular torrent site for sharing pirated content",
 				"Offering cloud storage services"
+			]
+		},
+		{
+			"question": "In cybersecurity, what does the term 'phishing' refer to?",
+			"options": [
+				"A technique used to catch fish using electronic devices",
+				"A method of encrypting data for secure transmission",
+				"A cyber attack that tricks individuals into providing sensitive information",
+				"A software that protects against malware, catching them like fish in a net",
+				"A type of firewall configuration"
+			]
+		},
+		{
+			"question": "What are the most common http requests?",
+			"options": [
+				"GET, POST, PUT, DELETE",
+				"CONNECT, PATCH, TRACE, OPTIONS",
+				"FETCH, SEND, RECEIVE, UPDATE",
+				"OPEN, CLOSE, READ, WRITE",
+				"START, STOP, PAUSE, RESUME"
 			]
 		}
 	]
