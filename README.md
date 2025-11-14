@@ -58,6 +58,9 @@ Agora que a parte inicial já está pronta, finalmente implementei o quiz em si.
 O player clica nos botões, e no final é exibida a pontuação total. <br>
 <img src="images/11-11.png" alt="11-11" width="512"/>
 
+## 13/11:
+Adicionei mais duas perguntas para ficar 15 no total. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
