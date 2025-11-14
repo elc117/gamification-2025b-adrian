@@ -219,7 +219,7 @@ public class GameScreen implements Screen {
 
     private void playSoundtrack() {
         soundtrack = Gdx.audio.newMusic(Gdx.files.internal("audio/soundtrack.ogg"));
-        soundtrack.setVolume(0.5f);
+        soundtrack.setVolume(0.75f);
         soundtrack.setLooping(true);
         soundtrack.play();
     }

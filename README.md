@@ -64,6 +64,7 @@ Adicionei mais duas perguntas para ficar 15 no total. <br>
 ## 14/11:
 Agora as opções aparecem em ordem aleatória, ao invés de sempre na mesma ordem. <br>
 Isso fará o jogador ter que lembrar as respostas, ao invés de lembrar só a posição da resposta certa. <br>
+A seguir embaralhei também a ordem das questões. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>

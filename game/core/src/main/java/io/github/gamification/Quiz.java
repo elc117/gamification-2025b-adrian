@@ -41,10 +41,16 @@ public class Quiz {
 
 				byte answer_index = answerBytes[i++];
 				String answer_string = optionsArray[answer_index];
+
+				// shuffles options
 				shuffleOptions(optionsArray);
 				answer_index = findOptionIndex(optionsArray, answer_string);
+
 				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer_index);
 			}
+
+			// shuffles questions
+			shuffleQuestions(this.questions);
 
 		} catch (Exception e) {
 			Gdx.app.log("error", "Failed to load quiz from '" + jsonFilePath + "': " + e.getMessage());
@@ -67,7 +73,7 @@ public class Quiz {
         }
 	}
 
-	private JsonValue getJsonQuestions(String jsonFilePath) {
+	private static JsonValue getJsonQuestions(String jsonFilePath) {
 		FileHandle jsonFile = Gdx.files.internal(jsonFilePath);
 		if (!jsonFile.exists()) {
 			Gdx.app.log("error", "Quiz JSON file not found: " + jsonFilePath);
@@ -83,7 +89,7 @@ public class Quiz {
 		return questionsJson;
 	}
 
-	private void shuffleOptions(String[] options) {
+	private static void shuffleOptions(String[] options) {
 		Random rand = new Random();
 		for (int i = options.length - 1; i > 0; i--) {
 			int r = rand.nextInt(i + 1);
@@ -93,7 +99,17 @@ public class Quiz {
 		}
 	}
 
-	private byte findOptionIndex(String[] options, String option) {
+	private static void shuffleQuestions(Question[] questions) {
+		Random rand = new Random();
+		for (int i = questions.length - 1; i > 0; i--) {
+			int r = rand.nextInt(i + 1);
+			Question aux = questions[r];
+			questions[r] = questions[i];
+			questions[i] = aux;
+		}
+	}
+
+	private static byte findOptionIndex(String[] options, String option) {
 		for (byte i = 0; i < options.length; i++) {
 			if (options[i] == option)
 				return i;
