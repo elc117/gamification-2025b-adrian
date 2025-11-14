@@ -5,6 +5,8 @@ import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 import com.badlogic.gdx.Gdx;
 
+import java.util.Random;
+
 public class Quiz {
 	private Question[] questions;
 
@@ -37,8 +39,11 @@ public class Quiz {
 					optionsArray = new String[0];
 				}
 
-				byte answer = answerBytes[i++]; // read the answer from the binary file
-				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer);
+				byte answer_index = answerBytes[i++];
+				String answer_string = optionsArray[answer_index];
+				shuffleOptions(optionsArray);
+				answer_index = findOptionIndex(optionsArray, answer_string);
+				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer_index);
 			}
 
 		} catch (Exception e) {
@@ -76,5 +81,23 @@ public class Quiz {
 		}
 
 		return questionsJson;
+	}
+
+	private void shuffleOptions(String[] options) {
+		Random rand = new Random();
+		for (int i = options.length - 1; i > 0; i--) {
+			int r = rand.nextInt(i + 1);
+			String aux = options[r];
+			options[r] = options[i];
+			options[i] = aux;
+		}
+	}
+
+	private byte findOptionIndex(String[] options, String option) {
+		for (byte i = 0; i < options.length; i++) {
+			if (options[i] == option)
+				return i;
+		}
+		return -1;
 	}
 }

@@ -61,6 +61,10 @@ O player clica nos botões, e no final é exibida a pontuação total. <br>
 ## 13/11:
 Adicionei mais duas perguntas para ficar 15 no total. <br>
 
+## 14/11:
+Agora as opções aparecem em ordem aleatória, ao invés de sempre na mesma ordem. <br>
+Isso fará o jogador ter que lembrar as respostas, ao invés de lembrar só a posição da resposta certa. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -121,3 +125,4 @@ TODO
 22. JavaDocs. FileHandle - gdx 1.14.0 <https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/files/FileHandle.html>
 23. CodingTechRoom. How to Create a Button Using LibGDX. <https://codingtechroom.com/question/create-button-libgdx>
 24. LibGDX. Deploying your application - Deploy Web. <https://libgdx.com/wiki/deployment/deploying-your-application#deploy-web>
+25. Stack Overflow. Random shuffling of an array. <https://stackoverflow.com/questions/1519736/random-shuffling-of-an-array>
