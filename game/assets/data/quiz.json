@@ -1,23 +1,23 @@
 {
 	"questions": [
 		{
-			"question": "Which one of these is NOT an operating system?",
+			"question": "Which one of these is NOT a full operating system?",
 			"options": [
 				"Windows NT",
 				"Linux",
 				"MS-DOS",
 				"FreeBSD",
-				"Solaris"
+				"Oracle Solaris"
 			]
 		},
 		{
-			"question": "What does this C code do? while(1) malloc(1024);",
+			"question": "what does this linux shell command do:\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
 			"options": [
-				"Waits 1024 seconds to start",
-				"Allocs 1024 bytes of memory 1 time",
-				"A virus-like program that consumes memory",
-				"Creates an array of 1024 integers",
-				"Nothing"
+				"Creates a backup of the hard drive to a file",
+				"Formats the hard drive to prepare it for a new OS installation",
+				"Copies random data to the hard drive, effectively destroying all data",
+				"Scans the hard drive for errors and bad sectors",
+				"Encrypts the hard drive using random keys"
 			]
 		},
 		{
@@ -77,7 +77,7 @@
 				"To print a value to the console",
 				"To go back to a previous command",
 				"To send a value back to the caller of the function",
-				"To create a loop"
+				"To return the value to the operating system"
 			]
 		},
 		{
@@ -93,17 +93,17 @@
 		{
 			"question": "In object-oriented programming, what does inheritance allow a class to do?",
 			"options": [
-				"Allow a class to inherit the money and house of its parents.",
-				"Use methods and properties of another class",
-				"Prevent code duplication",
+				"Inherit the money and goods of its parents.",
+				"Reuse methods and properties of another class",
+				"Create multiple instances of the same class",
 				"Keep elements of the class private",
-				"Allow a function to have multiple forms"
+				"To have functions with the same name but different parameters"
 			]
 		},
 		{
 			"question": "What is a 'syscall'?",
 			"options": [
-				"A type of malware that infects system files by calling them multiple times",
+				"A type of malware that infects the system by calling many processes",
 				"A system used to make calls using a SIM card",
 				"A software to call system administrators for help",
 				"A network protocol for making secure calls between systems",
@@ -111,7 +111,7 @@
 			]
 		},
 		{
-			"question": "A <answer> creates a secure connection between your device and the internet, encrypting your data and masking your IP address.",
+			"question": "A <answer> encrypts your internet traffic and hides your IP address by routing it through multiple servers.",
 			"options": [
 				"Firewall",
 				"Proxy",
@@ -124,7 +124,7 @@
 			"question": "What is the site 'thepiratebay.org' known for?",
 			"options": [
 				"A multiplayer web game with battles between pirate ships",
-				"Providing a platform for legal music downloads",
+				"A legal streaming service for pirate-themed movies and shows",
 				"Hosting information about historic facts related to pirates",
 				"Being a popular torrent site for sharing pirated content",
 				"Offering cloud storage services"
@@ -144,10 +144,20 @@
 			"question": "What are the most common http requests?",
 			"options": [
 				"GET, POST, PUT, DELETE",
-				"CONNECT, PATCH, TRACE, OPTIONS",
-				"FETCH, SEND, RECEIVE, UPDATE",
 				"OPEN, CLOSE, READ, WRITE",
-				"START, STOP, PAUSE, RESUME"
+				"START, STOP, PAUSE, RESUME",
+				"FETCH, SEND, RECEIVE, UPDATE",
+				"HALT, TRANSFER, TAKE, POSTPONE"
+			]
+		},
+		{
+			"question": "Which of the following is a characteristic of a relational database?",
+			"options": [
+				"It stores data in key-value pairs",
+				"It organizes data into tables with rows and columns",
+				"It uses a tree-like structure to store data",
+				"It is designed for unstructured data like images and videos",
+				"It does not support SQL for querying data"
 			]
 		}
 	]
