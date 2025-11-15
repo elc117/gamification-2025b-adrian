@@ -69,7 +69,8 @@ A seguir embaralhei também a ordem das questões. <br>
 ## 15/11:
 Mudei a fonte e cor de alguns textos para ficar mais fácil de ler. <br>
 <img src="images/11-15a.png" alt="11-15a" width="256"/>
-<img src="images/11-15b.png" alt="11-15b" width="256"/>
+<img src="images/11-15b.png" alt="11-15b" width="256"/> <br>
+Adicionei mais uma pergunta sobre banco de dados e ajustei algumas outras. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>

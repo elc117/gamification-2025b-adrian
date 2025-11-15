@@ -11,7 +11,7 @@
 			]
 		},
 		{
-			"question": "what does this linux shell command do:\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
+			"question": "what does this linux shell command do?\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
 			"options": [
 				"Creates a backup of the hard drive to a file",
 				"Formats the hard drive to prepare it for a new OS installation",
