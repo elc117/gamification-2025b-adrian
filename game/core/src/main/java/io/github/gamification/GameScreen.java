@@ -23,9 +23,6 @@ public class GameScreen implements Screen {
     private SpriteBatch batch;
     private OrthographicCamera camera;
 
-    // Background texture
-    private Texture backgroundTexture;
-
     // Characters of the game
     private Knight knight;
     private Character wizard;
@@ -34,9 +31,6 @@ public class GameScreen implements Screen {
     private BitmapFont font;
     private GlyphLayout titleLayout;
     private final String title = "Programming Quest";
-
-    // Game soundtrack that will play in loop
-    private Music soundtrack;
 
     // The quiz object that will contain all the questions and answers
     private final Quiz quiz = new Quiz("data/quiz.json");
@@ -58,12 +52,10 @@ public class GameScreen implements Screen {
         batch = new SpriteBatch();
         initCamera();
 
-        backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
         knight = new Knight(camera.viewportWidth * 0.2f, camera.viewportHeight * 0.2f);
         wizard = new Wizard(camera.viewportWidth * 0.8f, camera.viewportHeight * 0.2f);
 
         initTitle();
-        playSoundtrack();
         shapeRenderer = new ShapeRenderer();
         questionLayout = new GlyphLayout();
     }
@@ -78,7 +70,7 @@ public class GameScreen implements Screen {
 
         // Draw background and characters
         batch.begin();
-        batch.draw(backgroundTexture, 0, 0, camera.viewportWidth, camera.viewportHeight);
+        batch.draw(Main.getBackgroundTexture(), 0, 0, camera.viewportWidth, camera.viewportHeight);
         knight.render(batch);
         wizard.render(batch);
         renderTitle();
@@ -223,13 +215,6 @@ public class GameScreen implements Screen {
         float titleX = camera.viewportWidth / 2f - titleLayout.width / 2f;
         float titleY = camera.viewportHeight - 15f;
         font.draw(batch, titleLayout, titleX, titleY);
-    }
-
-    private void playSoundtrack() {
-        soundtrack = Gdx.audio.newMusic(Gdx.files.internal("audio/soundtrack.ogg"));
-        soundtrack.setVolume(1f);
-        soundtrack.setLooping(true);
-        soundtrack.play();
     }
 
     private Rectangle[] buildOptionButtons(int numOptions) {
