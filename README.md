@@ -66,6 +66,11 @@ Agora as opções aparecem em ordem aleatória, ao invés de sempre na mesma ord
 Isso fará o jogador ter que lembrar as respostas, ao invés de lembrar só a posição da resposta certa. <br>
 A seguir embaralhei também a ordem das questões. <br>
 
+## 15/11:
+Mudei a fonte e cor de alguns textos para ficar mais fácil de ler. <br>
+<img src="images/11-15a.png" alt="11-15a" width="256"/>
+<img src="images/11-15b.png" alt="11-15b" width="256"/>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>

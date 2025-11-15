@@ -13,6 +13,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.graphics.Color; // added import
 
 /*
 * This is the main screen of the game.
@@ -124,11 +125,18 @@ public class GameScreen implements Screen {
 
             // Draw question and option text on top
             batch.begin();
+
+            // Save previous color to restore later
+            Color oldColor = font.getColor().cpy();
+            
             // Question text
+            font.setColor(Color.BLACK);
             questionLayout.setText(font, question.getQuestion());
             float qx = camera.viewportWidth / 2f - questionLayout.width / 2f; // centered
             float qy = camera.viewportHeight - 80f;
             font.draw(batch, questionLayout, qx, qy);
+
+            font.setColor(oldColor); // restore font color
 
             // Options text
             for (int i = 0; i < options.length; i++) {
@@ -263,11 +271,27 @@ public class GameScreen implements Screen {
         // Quiz finished - show final score out of total questions
         String scoreText = "Game Over! Your score: " + knight.getScore() + "/" + quiz.getQuestions().length;
         GlyphLayout scoreLayout = new GlyphLayout(font, scoreText);
+
+        // Save previous font scale and color to restore later
+        float oldScaleX = font.getData().scaleX;
+        float oldScaleY = font.getData().scaleY;
+        Color oldColor = font.getColor().cpy();
+
+        // Increase font size and set color to blue
+        font.getData().setScale(1.8f); // adjust multiplier as desired
+        font.setColor(Color.BLUE);
+
+        // Recalculate layout for the larger font
+        scoreLayout.setText(font, scoreText);
         float sx = camera.viewportWidth / 2f - scoreLayout.width / 2f;
         float sy = camera.viewportHeight / 2f + scoreLayout.height / 2f;
 
         batch.begin();
         font.draw(batch, scoreLayout, sx, sy);
         batch.end();
+
+        // Restore previous font settings
+        font.getData().setScale(oldScaleX, oldScaleY);
+        font.setColor(oldColor);
     }
 }
