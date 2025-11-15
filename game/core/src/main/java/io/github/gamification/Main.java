@@ -4,10 +4,10 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /*
 * the main class of the game
+* it initializes the game, soundtrack, and background texture
  */
 public class Main extends Game {
     private static Texture backgroundTexture;
