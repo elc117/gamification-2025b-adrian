@@ -133,3 +133,4 @@ TODO
 23. CodingTechRoom. How to Create a Button Using LibGDX. <https://codingtechroom.com/question/create-button-libgdx>
 24. LibGDX. Deploying your application - Deploy Web. <https://libgdx.com/wiki/deployment/deploying-your-application#deploy-web>
 25. Stack Overflow. Random shuffling of an array. <https://stackoverflow.com/questions/1519736/random-shuffling-of-an-array>
+26. LibGDX. Extending the Simple Game. <https://libgdx.com/wiki/start/simple-game-extended>

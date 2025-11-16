@@ -76,16 +76,10 @@ public class GameScreen implements Screen {
         renderTitle();
         batch.end();
 
-        // If player is dead
-        if (knight.getHealth() == 0) {
-            quizFinished = true;
-        }
-
-        // Get questions
         Question[] questions = quiz.getQuestions();
         if (questions == null) return;
 
-        if (currentQuestionIndex >= questions.length) {
+        if (currentQuestionIndex >= questions.length || knight.getHealth() == 0) {
             quizFinished = true;
         }
 
@@ -263,7 +257,7 @@ public class GameScreen implements Screen {
         Color oldColor = font.getColor().cpy();
 
         // Increase font size and set color to blue
-        font.getData().setScale(1.8f); // adjust multiplier as desired
+        font.getData().setScale(1.5f); // adjust multiplier as desired
         font.setColor(Color.BLUE);
 
         // Recalculate layout for the larger font
