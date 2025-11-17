@@ -72,6 +72,9 @@ Mudei a fonte e cor de alguns textos para ficar mais fácil de ler. <br>
 <img src="images/11-15b.png" alt="11-15b" width="256"/> <br>
 Adicionei mais uma pergunta sobre banco de dados e ajustei algumas outras. <br>
 
+## 17/11:
+Adicionei sons de dano e recuperar vida. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
@@ -106,6 +109,7 @@ TODO
 2. itch.io. Wizard Pack by LuizMelo. <https://luizmelo.itch.io/wizard-pack>
 3. Video Cartoon Background at Amelie Challis blog. <https://storage.googleapis.com/dztonjyhtatade/video-cartoon-background.html>
 4. Rock Of Ages 2 OST. Of windmills & giants. <https://youtu.be/wupxR0Gjaj0>
+5. Youtube Sound Effects. Painful Scream Sound effect no copyright. <https://youtu.be/1X1K4cL32gk>
 
 ## Pesquisa:
 1. LibGDX. <https://libgdx.com/>

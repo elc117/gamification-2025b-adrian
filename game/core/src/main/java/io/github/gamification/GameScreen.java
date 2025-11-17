@@ -234,9 +234,11 @@ public class GameScreen implements Screen {
                     if (i == question.getAnswer()) {
                         knight.incrementScore();
                         knight.heal();
+                        Main.playHealSound();
                     }
                     else {
                         knight.damage();
+                        Main.playHurtSound();
                     }
                     // advance to next question
                     currentQuestionIndex++;

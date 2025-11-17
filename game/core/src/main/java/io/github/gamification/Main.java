@@ -2,6 +2,7 @@ package io.github.gamification;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 
@@ -12,9 +13,13 @@ import com.badlogic.gdx.graphics.Texture;
 public class Main extends Game {
     private static Texture backgroundTexture;
     private static Music soundtrack;
+    private static Sound hurt;
+    private static Sound heal;
     
     @Override
     public void create() {  
+        hurt = Gdx.audio.newSound(Gdx.files.internal("audio/hurt.ogg"));
+        heal = Gdx.audio.newSound(Gdx.files.internal("audio/heal.ogg"));
         playSoundtrack();
         backgroundTexture = new Texture(Gdx.files.internal("texture/background.jpg"));
 
@@ -42,5 +47,13 @@ public class Main extends Game {
         soundtrack.setVolume(1f);
         soundtrack.setLooping(true);
         soundtrack.play();
+    }
+
+    public static void playHurtSound() {
+        hurt.play();
+    }
+
+    public static void playHealSound() {
+        heal.play();
     }
 }
