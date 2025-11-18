@@ -8,17 +8,19 @@
 				"MS-DOS",
 				"FreeBSD",
 				"Oracle Solaris"
-			]
+			],
+			"_comment": "Linux is a kernel, the OS is usually called GNU/Linux."
 		},
 		{
-			"question": "what does this linux shell command do?\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
+			"question": "What does this linux shell command do?\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
 			"options": [
 				"Copies random data to the hard drive, effectively destroying all data",
 				"Creates a backup of the hard drive to a file",
 				"Formats the hard drive to prepare it for a new OS installation",
 				"Scans the hard drive for errors and bad sectors",
 				"Encrypts the hard drive using random keys"
-			]
+			],
+			"_comment": "/dev/urandom is a special file that provides random data. /dev/sda is usually the main hard drive."
 		},
 		{
 			"question": "What is cache memory?",
@@ -63,12 +65,13 @@
 		{
 			"question": "Who was Alan Turing?",
 			"options": [
-				"An english mathematician and computer scientist who played a key role in breaking the Enigma code during World War II",
+				"An english computer scientist who played a key role in breaking the Enigma code during World War II",
 				"An australian former hacker and activist who founded the WikiLeaks website, exposing classified government information",
 				"An english mathematician often regarded as the first computer programmer for working on the first proposed mechanical computer",
 				"A serbian-american inventor and engineer, known for his contributions to the development of alternating current (AC) electrical systems",
-				"An american inventor who created the first typewriter that later served as a basis for modern keyboards"
-			]
+				"An american software freedom activist and programmer, known for founding the Free Software Foundation and developing the GNU Project"
+			],
+			"_comment": "2 is Julian Assange, 3 is Ada Lovelace, 4 is Nikola Tesla, 5 is Richard Stallman."
 		},
 		{
 			"question": "What is the purpose of the 'return' statement in a function?",
@@ -118,7 +121,8 @@
 				"Proxy",
 				"Firewall",
 				"Router"
-			]
+			],
+			"_comment": "A VPN connection passes your traffic through a single centralized server, while Tor uses multiple decentralized nodes."
 		},
 		{
 			"question": "What is the site 'thepiratebay.org' known for?",
