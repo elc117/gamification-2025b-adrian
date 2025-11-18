@@ -6,6 +6,7 @@ Este é um jogo web/desktop feito na biblioteca LibGDX em Java.
 Se trata de um quiz com perguntas relacionadas a temas de computação. <br>
 Para cada questão errada, o jogador perde dois de vida, e para cada certa, recupera um de vida. <br>
 Se chegar ao final sem morrer, vence o jogo, e o inimigo, que faz as perguntas, é derrotado. <br>
+O nível de dificuldade das perguntas é alto, pois a ideia é testar se a pessoa domina os conceitos. <br>
 O objetivo do projeto é criar uma forma divertida de praticar conhecimentos de programação.
 
 # Processo de desenvolvimento 🛠️:
@@ -78,6 +79,7 @@ Adicionei sons de dano e recuperar vida. <br>
 ## 18/11:
 Como agora as opções são embaralhadas aleatoriamente, não preciso mais guardar as respostas,
 então fiz para no arquivo JSON a primeira opção ser a resposta correta, e depois, dentro do programa, será embaralhado. <br>
+Adicionei mais 9 perguntas, totalizando 25. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>

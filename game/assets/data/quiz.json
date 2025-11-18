@@ -163,6 +163,101 @@
 				"It is designed for unstructured data like images and videos",
 				"It does not support complex queries"
 			]
+		},
+		{
+			"question": "Wich one of these is NOT a type of malware?",
+			"options": [
+				"Fireware",
+				"Virus",
+				"Spyware",
+				"Trojan",
+				"Keylogger"
+			],
+			"_comment": "Fireware is a brand of networking hardware."
+		},
+		{
+			"question": "What are usually the phases of software development?",
+			"options": [
+				"Planning, Design, Implementation, Testing, Deployment, Maintenance",
+				"Project, Coding, Testing, Debugging, Execution, Documentation",
+				"Design, Development, Fixing, Marketing, Sales, Profit",
+				"Creation, Production, Organization, Distribution, Feedback, Support",
+				"Research, Development, Testing, Launch, Distribution, Update"
+			]
+		},
+		{
+			"question": "How to check if a number is even in C programming language?",
+			"options": [
+				"if (!(number % 2))",
+				"if (number % 2 = 0)",
+				"if (number / 2 == 0)",
+				"if (number & 1)",
+				"if (number.is_even())"
+			]
+		},
+		{
+			"question": "Is Schrödinger's cat dead or alive?",
+			"options": [
+				"Both",
+				"Alive",
+				"Dead",
+				"Neither",
+				"Unknown"
+			]
+		},
+		{
+			"question": "What is the filesystem most commonly used in USB flash drives?",
+			"options": [
+				"fat32",
+				"ntfs",
+				"ext4",
+				"btrfs",
+				"zip"
+			]
+		},
+		{
+			"question": "Which of the following contains incorrect type(s) of file formats?",
+			"options": [
+				"audio: mp3, mp4, wav, aac, ogg",
+				"plain text: txt, md, json, log, java",
+				"binary: exe, dll, bin, dat, class",
+				"compressed: zip, rar, tar, iso, paq8",
+				"image: jpg, png, gif, svg, webp"
+			],
+			"_comment": "mp4 is a video format."
+		},
+		{
+			"question": "How much is 1 Tb and 1 TiB?",
+			"options": [
+				"1000 Gb and 8192 Gib",
+				"1024 Gb and 1000 Gib",
+				"1000 Gb and 1024 Gib",
+				"8192 Gb and 1000 Gib",
+				"1024 Gb and 8192 Gib"
+			],
+			"_comment": "tera = 1024 giga, tebi = 1024 gibi, 1 byte = 8 bits."
+		},
+		{
+			"question": "Wich of the hardware descriptions below is incorrect?",
+			"options": [
+				"RAM: Random Access Memory, a type of non-volatile storage used for data retention",
+				"GPU: Graphics Processing Unit, responsible for rendering images and videos",
+				"CPU: Central Processing Unit, the main processor that executes instructions",
+				"SSD: Solid State Drive, a storage device that uses flash memory to store data",
+				"Motherboard: The main circuit board that connects all components of a computer"
+			],
+			"_comment": "RAM is volatile memory."
+		},
+		{
+			"question": "void*** something = (void***) calloc(N, sizeof(void**));\nfor (int i = 0; i < N; i++) something[i] = (void**) calloc(N, sizeof(void**));",
+			"options": [
+				"'Something' is a 2D array of anything",
+				"'Something' is a 3D array of anything",
+				"'Something' is a 1D array of nothing",
+				"'Something' is a 3D array of nothing",
+				"'Something' is a pointer to nothing"
+			],
+			"_comment": "void*** is a pointer to a pointer to a pointer to anything. The code allocates a 2D array of pointers to anything."
 		}
 	]
 }
