@@ -3,8 +3,8 @@
 		{
 			"question": "Which one of these is NOT a full operating system?",
 			"options": [
-				"Windows NT",
 				"Linux",
+				"Windows NT",
 				"MS-DOS",
 				"FreeBSD",
 				"Oracle Solaris"
@@ -13,9 +13,9 @@
 		{
 			"question": "what does this linux shell command do?\nsudo dd if=/dev/urandom of=/dev/sda bs=1M status=progress",
 			"options": [
+				"Copies random data to the hard drive, effectively destroying all data",
 				"Creates a backup of the hard drive to a file",
 				"Formats the hard drive to prepare it for a new OS installation",
-				"Copies random data to the hard drive, effectively destroying all data",
 				"Scans the hard drive for errors and bad sectors",
 				"Encrypts the hard drive using random keys"
 			]
@@ -23,11 +23,11 @@
 		{
 			"question": "What is cache memory?",
 			"options": [
+				"A smaller memory to hold temporary values from RAM that are used frequently",
 				"A brand of smartphones that have more memory than usual",
 				"A slower memory used to hold big files that can't fit in RAM",
 				"A persistent storage like an HD or SSD",
-				"A backup memory that stores data when the computer is turned off",
-				"A smaller memory to hold temporary values from RAM that are used frequently"
+				"A backup memory that stores data when the computer is turned off"
 			]
 		},
 		{
@@ -43,9 +43,9 @@
 		{
 			"question": "Which of these algorithms is better for sorting integer arrays?",
 			"options": [
+				"Counting Sort",
 				"Radix Sort",
 				"Quick Sort",
-				"Counting Sort",
 				"Bubble Sort",
 				"Linked Lists"
 			]
@@ -63,29 +63,29 @@
 		{
 			"question": "Who was Alan Turing?",
 			"options": [
-				"A famous hacker known for breaking into government systems and creating the WikiLeaks website",
-				"A pioneer in the development of the internet, inventor of the http protocol",
-				"The inventor of the first mechanical computer",
-				"A computer scientist known for laying the groundwork for modern computing",
-				"A baron of scotland, inventor of the writing machine that later was the base to the creation of keyboards"
+				"An english mathematician and computer scientist who played a key role in breaking the Enigma code during World War II",
+				"An australian former hacker and activist who founded the WikiLeaks website, exposing classified government information",
+				"An english mathematician often regarded as the first computer programmer for working on the first proposed mechanical computer",
+				"A serbian-american inventor and engineer, known for his contributions to the development of alternating current (AC) electrical systems",
+				"An american inventor who created the first typewriter that later served as a basis for modern keyboards"
 			]
 		},
 		{
 			"question": "What is the purpose of the 'return' statement in a function?",
 			"options": [
+				"To send a value back to the caller of the function",
 				"To exit the program",
 				"To print a value to the console",
 				"To go back to a previous command",
-				"To send a value back to the caller of the function",
 				"To return the value to the operating system"
 			]
 		},
 		{
 			"question": "Which of the following data structures uses FIFO (First In, First Out) principle?",
 			"options": [
+				"Queue",
 				"Linked List",
 				"Stack",
-				"Queue",
 				"Binary Tree",
 				"Trash Can"
 			]
@@ -93,8 +93,8 @@
 		{
 			"question": "In object-oriented programming, what does inheritance allow a class to do?",
 			"options": [
-				"Inherit the money and goods of its parents.",
 				"Reuse methods and properties of another class",
+				"Inherit the money and goods of its parents",
 				"Create multiple instances of the same class",
 				"Keep elements of the class private",
 				"To have functions with the same name but different parameters"
@@ -103,39 +103,39 @@
 		{
 			"question": "What is a 'syscall'?",
 			"options": [
+				"A system call that allows programs to request services from the operating system",
 				"A type of malware that infects the system by calling many processes",
 				"A system used to make calls using a SIM card",
 				"A software to call system administrators for help",
-				"A network protocol for making secure calls between systems",
-				"A system call that allows programs to request services from the operating system"
+				"A network protocol for making secure calls between systems"
 			]
 		},
 		{
-			"question": "A <answer> encrypts your internet traffic and hides your IP address by routing it through multiple servers.",
+			"question": "A <answer> encrypts your internet traffic and hides your IP address by routing it through multiple volunteer-operated servers.",
 			"options": [
-				"Firewall",
-				"Proxy",
-				"VPN",
 				"Tor Network",
+				"VPN",
+				"Proxy",
+				"Firewall",
 				"Router"
 			]
 		},
 		{
 			"question": "What is the site 'thepiratebay.org' known for?",
 			"options": [
+				"Being a popular torrent site for sharing pirated content",
 				"A multiplayer web game with battles between pirate ships",
 				"A legal streaming service for pirate-themed movies and shows",
 				"Hosting information about historic facts related to pirates",
-				"Being a popular torrent site for sharing pirated content",
 				"Offering cloud storage services"
 			]
 		},
 		{
 			"question": "In cybersecurity, what does the term 'phishing' refer to?",
 			"options": [
+				"A cyber attack that tricks individuals into providing sensitive information",
 				"A technique used to catch fish using electronic devices",
 				"A method of encrypting data for secure transmission",
-				"A cyber attack that tricks individuals into providing sensitive information",
 				"A software that protects against malware, catching them like fish in a net",
 				"A type of firewall configuration"
 			]
@@ -153,11 +153,11 @@
 		{
 			"question": "Which of the following is a characteristic of a relational database?",
 			"options": [
-				"It stores data in key-value pairs",
 				"It organizes data into tables with rows and columns",
+				"It stores data in key-value pairs",
 				"It uses a tree-like structure to store data",
 				"It is designed for unstructured data like images and videos",
-				"It does not support SQL for querying data"
+				"It does not support complex queries"
 			]
 		}
 	]

@@ -1,9 +1,9 @@
 package io.github.gamification;
 
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 
 import java.util.Random;
 
@@ -14,11 +14,6 @@ public class Quiz {
 		// Load JSON from given path (relative path inside assets folder)
 		try {
 			JsonValue questionsJson = getJsonQuestions(jsonFilePath);
-
-			FileHandle answersFile = Gdx.files.internal("data/answers.dat");
-			byte[] answerBytes = answersFile.readBytes();
-			int i = 0; // counter to read bytes
-
 			// get questions array
 			this.questions = new Question[questionsJson.size];
 			int questionIndex = 0;
@@ -39,12 +34,11 @@ public class Quiz {
 					optionsArray = new String[0];
 				}
 
-				byte answer_index = answerBytes[i++];
-				String answer_string = optionsArray[answer_index];
+				String answer_string = optionsArray[0]; // first option is the correct answer, will be shuffled later
 
 				// shuffles options
 				shuffleOptions(optionsArray);
-				answer_index = findOptionIndex(optionsArray, answer_string);
+				byte answer_index = findOptionIndex(optionsArray, answer_string);
 
 				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer_index);
 			}

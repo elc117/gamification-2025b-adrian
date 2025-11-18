@@ -75,6 +75,10 @@ Adicionei mais uma pergunta sobre banco de dados e ajustei algumas outras. <br>
 ## 17/11:
 Adicionei sons de dano e recuperar vida. <br>
 
+## 18/11:
+Como agora as opções são embaralhadas aleatoriamente, não preciso mais guardar as respostas,
+então fiz para no arquivo JSON a primeira opção ser a resposta correta, e depois, dentro do programa, será embaralhado. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>

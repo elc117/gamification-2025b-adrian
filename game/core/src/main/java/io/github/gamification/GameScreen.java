@@ -40,7 +40,7 @@ public class GameScreen implements Screen {
     private GlyphLayout questionLayout;
 
     // Layout constants
-    private static final float BUTTON_WIDTH = 768f;
+    private static final float BUTTON_WIDTH = 896f;
     private static final float BUTTON_HEIGHT = 40f;
     private static final float BUTTON_PADDING = 12f;
 
