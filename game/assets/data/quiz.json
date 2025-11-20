@@ -10,8 +10,7 @@
 				"Oracle Solaris",
 				"Android",
 				"MacOS",
-				"iOS",
-				"Debian GNU/Linux"
+				"iOS"
 			],
 			"_comment": "Linux is a kernel, the OS is usually called GNU/Linux."
 		},
@@ -237,6 +236,8 @@
 			"options": [
 				"if (!(number % 2))",
 				"if (!(number / 2))",
+				"if (number % 2)",
+				"if (number / 2)",
 				"if (number % 2 = 0)",
 				"if (number / 2 == 0)",
 				"if (number / 2 = 0)",
@@ -308,7 +309,7 @@
 				"SSD: Solid State Drive, a storage device that uses flash memory to store data",
 				"PSU: Power Supply Unit, converts electrical power to the correct voltage",
 				"Cooler: A device used to dissipate heat from computer components",
-				"Wireless Card: A hardware component that enables wireless connectivity, not present in all computers",
+				"Wireless Card: A hardware component that enables wireless connectivity",
 				"Case: The enclosure that houses all computer components",
 				"Motherboard: The main circuit board that connects all components of a computer"
 			],
@@ -327,6 +328,100 @@
 				"'Something' is a pointer to nothing"
 			],
 			"_comment": "void*** is a pointer to a pointer to a pointer to anything. The code allocates a 2D array of pointers to anything."
+		},
+		{
+			"question": "Which of the following is NOT a GNU/Linux distro?",
+			"options": [
+				"BSD Unix",
+				"Debian",
+				"Garuda",
+				"Fedora",
+				"Winux",
+				"Red Star OS",
+				"Arch",
+				"Gentoo",
+				"Alpine",
+				"Linux Kamarada"
+			],
+			"_comment": "BSD Unix is a different family of operating systems similar to Linux."
+		},
+		{
+			"question": "What is the algorithm used to find the shortest path in a graph with non-negative weights?",
+			"options": [
+				"Dijkstra's algorithm",
+				"Radix Sort MSD",
+				"A* search algorithm",
+				"Bellman-Ford algorithm",
+				"Floyd-Warshall algorithm",
+				"Prim's algorithm",
+				"Kruskal's algorithm",
+				"Binary Search"
+			]
+		},
+		{
+			"question": "What is a water cooled PC?",
+			"options": [
+				"A computer that uses liquid cooling to dissipate heat from components",
+				"A computer that is submerged in water for cooling",
+				"A computer that uses ice packs to keep components cool",
+				"A computer that uses air cooling with water vapor",
+				"A computer that uses a water-based thermal paste",
+				"A computer that doesn't get colder than water temperature",
+				"A computer that uses water as a power source"
+			]
+		},
+		{
+			"question": "Which of the following is not HARDWARE?",
+			"options": [
+				"Drivers",
+				"Keyboard",
+				"USB Port",
+				"Ethernet Cable",
+				"TouchPad",
+				"Headphones",
+				"GPS",
+				"Anthenna"
+			],
+			"_comment": "Drivers are software that allow the operating system to communicate with hardware."
+		},
+		{
+			"question": "Which option contains only Open Source software?",
+			"options": [
+				"Firefox, VLC, LibreOffice, Audacity, Python",
+				"Chrome, Android, OpenOffice, GIMP, Java",
+				"Photoshop, Linux, VSCode, OBS Studio, Dotnet",
+				"Chromium, GCC, Microsoft Office, KDENlive, PHP",
+				"GNU Core Utils, CorelDRAW, OnlyOffice, MPV Media Player, JavaScript",
+				"Gedit, MacOS, Google Docs, Brave, Kotlin",
+				"Bitwarden, Bash, Vim, Opera, Ruby on Rails"
+			],
+			"_comment": "Chrome, Photoshop, Microsoft Office, CorelDRAW, MacOS and Opera are NOT Open Source."
+		},
+		{
+			"question": "What is the programming paradigm of C, Java, Haskell and Prolog, respectively?",
+			"options": [
+				"Procedural, Object-Oriented, Functional, Logic",
+				"Procedural, Functional, Object-Oriented, Logic",
+				"Object-Oriented, Procedural, Logic, Functional",
+				"Object-Oriented, Logic, Functional, Procedural",
+				"Functional, Logic, Procedural, Object-Oriented",
+				"Functional, Procedural, Logic, Object-Oriented",
+				"Logic, Functional, Object-Oriented, Procedural",
+				"Logic, Object-Oriented, Procedural, Functional"
+			]
+		},
+		{
+			"question": "Wich of the following options contains search engines?",
+			"options": [
+				"Google, Bing, DuckDuckGo, Yahoo, Baidu",
+				"Youtube, Facebook, Twitter, Instagram, LinkedIn",
+				"Reddit, Quora, StackOverflow, Medium, Tumblr",
+				"Wikipedia, Britannica, Encyclopedia.com, Infoplease, Wikihow",
+				"Amazon, eBay, Alibaba, Walmart, Aliexpress",
+				"Netflix, Hulu, Disney+, HBO Max, Prime Video",
+				"ChatGPT, Claude, Copilot, Grok, Deepseek"
+			],
+			"_comment": "2 is social media, 3 is Q&A and forums, 4 is encyclopedias, 5 is e-commerce, 6 is streaming services, 7 is AI assistants."
 		}
 	]
 }
