@@ -9,6 +9,7 @@ import java.util.Random;
 
 public class Quiz {
 	private Question[] questions;
+	private static final int MAX_QUESTIONS = 16; // if there's more than this number of questions, some will be removed
 
 	public Quiz (String jsonFilePath) {
 		// Load JSON from given path (relative path inside assets folder)
@@ -45,6 +46,14 @@ public class Quiz {
 
 			// shuffles questions
 			shuffleQuestions(this.questions);
+
+			// selects only up to MAX_QUESTIONS. Since it shuffles before, it's random which questions are kept
+			if (this.questions.length > MAX_QUESTIONS) {
+				// truncate questions array to MAX_QUESTIONS
+				Question[] truncatedQuestions = new Question[MAX_QUESTIONS];
+				System.arraycopy(this.questions, 0, truncatedQuestions, 0, MAX_QUESTIONS);
+				this.questions = truncatedQuestions;
+			}
 
 		} catch (Exception e) {
 			Gdx.app.log("error", "Failed to load quiz from '" + jsonFilePath + "': " + e.getMessage());

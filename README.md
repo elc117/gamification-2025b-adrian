@@ -81,6 +81,10 @@ Como agora as opções são embaralhadas aleatoriamente, não preciso mais guard
 então fiz para no arquivo JSON a primeira opção ser a resposta correta, e depois, dentro do programa, será embaralhado. <br>
 Adicionei mais 9 perguntas, totalizando 25. <br>
 
+## 20/11:
+Como o quiz estava muito grande, configurei o programa para selecionar aleatoriamente algumas perguntas apenas. <br>
+Isso adiciona mais variedade ao quiz, fazendo-o ser um pouco diferente a cada jogo. <br>
+
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
