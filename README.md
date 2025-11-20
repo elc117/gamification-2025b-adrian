@@ -85,6 +85,7 @@ Adicionei mais 9 perguntas, totalizando 25. <br>
 Como o quiz estava muito grande, configurei o programa para selecionar aleatoriamente algumas perguntas apenas. <br>
 Isso adiciona mais variedade ao quiz, fazendo-o ser um pouco diferente a cada jogo. <br>
 A seguir, fiz a mesma coisa com as opções. Tomei cuidado para garantir que a resposta correta fique entre as opções exibidas, é claro. <br>
+Adicionei mais opções ao arquivo json, mas ainda serão escolhidas apenas quatro delas. <br>
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>

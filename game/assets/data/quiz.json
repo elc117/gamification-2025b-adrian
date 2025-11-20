@@ -7,7 +7,11 @@
 				"Windows NT",
 				"MS-DOS",
 				"FreeBSD",
-				"Oracle Solaris"
+				"Oracle Solaris",
+				"Android",
+				"MacOS",
+				"iOS",
+				"Debian GNU/Linux"
 			],
 			"_comment": "Linux is a kernel, the OS is usually called GNU/Linux."
 		},
@@ -18,7 +22,8 @@
 				"Creates a backup of the hard drive to a file",
 				"Formats the hard drive to prepare it for a new OS installation",
 				"Scans the hard drive for errors and bad sectors",
-				"Encrypts the hard drive using random keys"
+				"Encrypts the hard drive using random keys",
+				"Deletes random files from the hard drive to free up space"
 			],
 			"_comment": "/dev/urandom is a special file that provides random data. /dev/sda is usually the main hard drive."
 		},
@@ -29,7 +34,8 @@
 				"A brand of smartphones that have more memory than usual",
 				"A slower memory used to hold big files that can't fit in RAM",
 				"A persistent storage like an HD or SSD",
-				"A backup memory that stores data when the computer is turned off"
+				"A backup memory that stores data when the computer is turned off",
+				"A type of self-hosted cloud storage for quick access"
 			]
 		},
 		{
@@ -39,7 +45,10 @@
 				"0x123",
 				"0x47",
 				"0x2C7",
-				"0xAB"
+				"0xAB",
+				"0x1F4",
+				"0x3E8",
+				"0x64"
 			]
 		},
 		{
@@ -49,6 +58,9 @@
 				"Radix Sort",
 				"Quick Sort",
 				"Bubble Sort",
+				"Selection Sort",
+				"Insertion Sort",
+				"Heap Sort",
 				"Linked Lists"
 			]
 		},
@@ -59,7 +71,10 @@
 				"Data Network Service",
 				"Digital Numbering System",
 				"Dangerous Nuclear Substances",
-				"Distributed Network Security"
+				"Distributed Network Security",
+				"Dynamic Node Synchronization",
+				"Direct Network Service",
+				"Data Name Service"
 			]
 		},
 		{
@@ -69,9 +84,12 @@
 				"An australian former hacker and activist who founded the WikiLeaks website, exposing classified government information",
 				"An english mathematician often regarded as the first computer programmer for working on the first proposed mechanical computer",
 				"A serbian-american inventor and engineer, known for his contributions to the development of alternating current (AC) electrical systems",
-				"An american software freedom activist and programmer, known for founding the Free Software Foundation and developing the GNU Project"
+				"An american software freedom activist and programmer, known for founding the Free Software Foundation and developing the GNU Project",
+				"An american inventor who invented the first typewriter and the QWERTY keyboard layout",
+				"A canadian-american inventor and electrical engineer, known for inventing the first practical telephone and the AT&T corporation",
+				"An american computer programmer who created the JavaScript programming language and co-founded the Mozilla project and the Brave browser"
 			],
-			"_comment": "2 is Julian Assange, 3 is Ada Lovelace, 4 is Nikola Tesla, 5 is Richard Stallman."
+			"_comment": "2 is Julian Assange, 3 is Ada Lovelace, 4 is Nikola Tesla, 5 is Richard Stallman, 6 is Christopher Latham Sholes, 7 is Alexander Graham Bell, 8 is Brendan Eich."
 		},
 		{
 			"question": "What is the purpose of the 'return' statement in a function?",
@@ -80,7 +98,9 @@
 				"To exit the program",
 				"To print a value to the console",
 				"To go back to a previous command",
-				"To return the value to the operating system"
+				"To return the value to the operating system",
+				"To restart the function from the beginning",
+				"To pause the function execution"
 			]
 		},
 		{
@@ -89,7 +109,12 @@
 				"Queue",
 				"Linked List",
 				"Stack",
+				"Vector",
+				"Circular List",
+				"Array",
 				"Binary Tree",
+				"Graph",
+				"B-Tree",
 				"Trash Can"
 			]
 		},
@@ -100,7 +125,9 @@
 				"Inherit the money and goods of its parents",
 				"Create multiple instances of the same class",
 				"Keep elements of the class private",
-				"To have functions with the same name but different parameters"
+				"To have functions with the same name but different parameters",
+				"To define a class without any properties or methods",
+				"To convert one data type to another"
 			]
 		},
 		{
@@ -110,7 +137,9 @@
 				"A type of malware that infects the system by calling many processes",
 				"A system used to make calls using a SIM card",
 				"A software to call system administrators for help",
-				"A network protocol for making secure calls between systems"
+				"A network protocol for making secure calls between systems",
+				"A debugging tool for tracking system errors",
+				"A command-line software in GNU/Linux for managing system processes"
 			]
 		},
 		{
@@ -120,7 +149,12 @@
 				"VPN",
 				"Proxy",
 				"Firewall",
-				"Router"
+				"Router",
+				"DNS",
+				"SSH Tunnel",
+				"Antivirus",
+				"Ad Blocker",
+				"HTTPS"
 			],
 			"_comment": "A VPN connection passes your traffic through a single centralized server, while Tor uses multiple decentralized nodes."
 		},
@@ -131,6 +165,9 @@
 				"A multiplayer web game with battles between pirate ships",
 				"A legal streaming service for pirate-themed movies and shows",
 				"Hosting information about historic facts related to pirates",
+				"A social media platform for pirate enthusiasts",
+				"A marketplace for buying and selling pirate-themed merchandise",
+				"A blog about modern piracy and maritime security",
 				"Offering cloud storage services"
 			]
 		},
@@ -141,7 +178,9 @@
 				"A technique used to catch fish using electronic devices",
 				"A method of encrypting data for secure transmission",
 				"A software that protects against malware, catching them like fish in a net",
-				"A type of firewall configuration"
+				"A type of firewall configuration for protecting networks",
+				"A process of scanning networks for vulnerabilities",
+				"A type of malware that collects user data without consent"
 			]
 		},
 		{
@@ -151,7 +190,10 @@
 				"OPEN, CLOSE, READ, WRITE",
 				"START, STOP, PAUSE, RESUME",
 				"FETCH, SEND, RECEIVE, UPDATE",
-				"HALT, TRANSFER, TAKE, POSTPONE"
+				"HALT, TRANSFER, TAKE, POSTPONE",
+				"LOGIN, SIGNUP, LOGOUT, REFRESH",
+				"CONNECT, DISCONNECT, SYNC, ASYNC",
+				"SUBMIT, CANCEL, CONFIRM, DENY"
 			]
 		},
 		{
@@ -171,7 +213,10 @@
 				"Virus",
 				"Spyware",
 				"Trojan",
-				"Keylogger"
+				"Keylogger",
+				"Worm",
+				"Ransomware",
+				"Adware"
 			],
 			"_comment": "Fireware is a brand of networking hardware."
 		},
@@ -182,17 +227,26 @@
 				"Project, Coding, Testing, Debugging, Execution, Documentation",
 				"Design, Development, Fixing, Marketing, Sales, Profit",
 				"Creation, Production, Organization, Distribution, Feedback, Support",
-				"Research, Development, Testing, Launch, Distribution, Update"
+				"Research, Development, Testing, Launch, Distribution, Update",
+				"Analysis, Coding, Testing, Deployment, Review, Retirement",
+				"Concept, Design, Build, Test, Release, Monitor"
 			]
 		},
 		{
 			"question": "How to check if a number is even in C programming language?",
 			"options": [
 				"if (!(number % 2))",
+				"if (!(number / 2))",
 				"if (number % 2 = 0)",
 				"if (number / 2 == 0)",
+				"if (number / 2 = 0)",
 				"if (number & 1)",
-				"if (number.is_even())"
+				"if (number.is_even())",
+				"if (is_even(number))",
+				"if (number == even)",
+				"if (number == 2)",
+				"if (number + 1)",
+				"if (number XOR 2)"
 			]
 		},
 		{
@@ -212,6 +266,8 @@
 				"ntfs",
 				"ext4",
 				"btrfs",
+				"apfs",
+				"hfs+",
 				"zip"
 			]
 		},
@@ -220,6 +276,7 @@
 			"options": [
 				"audio: mp3, mp4, wav, aac, ogg",
 				"plain text: txt, md, json, log, java",
+				"formatted text: docx, odt, rtf, pdf, xlsx",
 				"binary: exe, dll, bin, dat, class",
 				"compressed: zip, rar, tar, iso, paq8",
 				"image: jpg, png, gif, svg, webp"
@@ -230,6 +287,10 @@
 			"question": "How much is 1 Tb and 1 TiB?",
 			"options": [
 				"1000 Gb and 8192 Gib",
+				"1000 Gb and 1024 Gib",
+				"1024 Gb and 8192 Gib",
+				"1024 Gb and 1000 Gib",
+				"1024 Gb and 8000 Gib",
 				"1024 Gb and 1000 Gib",
 				"1000 Gb and 1024 Gib",
 				"8192 Gb and 1000 Gib",
@@ -243,7 +304,12 @@
 				"RAM: Random Access Memory, a type of non-volatile storage used for data retention",
 				"GPU: Graphics Processing Unit, responsible for rendering images and videos",
 				"CPU: Central Processing Unit, the main processor that executes instructions",
+				"HD: Hard Drive, a magnetic storage device for storing data",
 				"SSD: Solid State Drive, a storage device that uses flash memory to store data",
+				"PSU: Power Supply Unit, converts electrical power to the correct voltage",
+				"Cooler: A device used to dissipate heat from computer components",
+				"Wireless Card: A hardware component that enables wireless connectivity, not present in all computers",
+				"Case: The enclosure that houses all computer components",
 				"Motherboard: The main circuit board that connects all components of a computer"
 			],
 			"_comment": "RAM is volatile memory."
@@ -252,8 +318,11 @@
 			"question": "void*** something = (void***) calloc(N, sizeof(void**));\nfor (int i = 0; i < N; i++) something[i] = (void**) calloc(N, sizeof(void**));",
 			"options": [
 				"'Something' is a 2D array of anything",
+				"'Something' is a 1D array of anything",
 				"'Something' is a 3D array of anything",
+				"'Something' is a pointer to anything",
 				"'Something' is a 1D array of nothing",
+				"'Something' is a 2D array of nothing",
 				"'Something' is a 3D array of nothing",
 				"'Something' is a pointer to nothing"
 			],
