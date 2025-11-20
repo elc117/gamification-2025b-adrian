@@ -10,6 +10,7 @@ import java.util.Random;
 public class Quiz {
 	private Question[] questions;
 	private static final int MAX_QUESTIONS = 16; // if there's more than this number of questions, some will be removed
+	private static final int MAX_OPTIONS = 4; // maximum number of options per question
 
 	public Quiz (String jsonFilePath) {
 		// Load JSON from given path (relative path inside assets folder)
@@ -35,11 +36,22 @@ public class Quiz {
 					optionsArray = new String[0];
 				}
 
-				String answer_string = optionsArray[0]; // first option is the correct answer, will be shuffled later
+				String answer_string = optionsArray[0]; // for now, first option is the correct answer, but will be shuffled later
 
-				// shuffles options
-				shuffleOptions(optionsArray);
-				byte answer_index = findOptionIndex(optionsArray, answer_string);
+				byte answer_index = 0;
+				do {
+					shuffleOptions(optionsArray);
+					answer_index = findOptionIndex(optionsArray, answer_string);
+					// if the correct answer index is out of bounds due to options truncation, reshuffle
+				} while (answer_index >= MAX_OPTIONS);
+
+				// selects only up to MAX_OPTIONS. Since it shuffles before, it's random which options are kept
+				if (optionsArray.length > MAX_OPTIONS) {
+					// truncate options array to MAX_OPTIONS
+					String[] truncatedOptions = new String[MAX_OPTIONS];
+					System.arraycopy(optionsArray, 0, truncatedOptions, 0, MAX_OPTIONS);
+					optionsArray = truncatedOptions;
+				}
 
 				this.questions[questionIndex++] = new Question(questionText, optionsArray, answer_index);
 			}
