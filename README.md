@@ -1,3 +1,7 @@
+# Jogar:
+Baixe e compile o projeto ou acesse o seguinte link:
+<https://spicydessert.itch.io/programming-quest-beta>
+
 # Identificação 🪪:
 Adrian, Sistemas de Informação
 
