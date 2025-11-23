@@ -17,7 +17,7 @@ desenhado com um animation sprite. <br>
 Baixei as imagens do site gameart2d.com. <br>
 Depois, troquei o nome da classe Knight para Character, para poder reaproveitá-la. <br>
 Então, criei o personagem wizard, que será o personagem que fará as perguntas. <br>
-<img src="images/10-31.png" alt="10-31" width="256"/>
+<img width="256" alt="10-31" src="https://github.com/user-attachments/assets/5d051199-7b79-4516-98ae-fcea2d9a6551" />
 
 ### 01/11:
 Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar quando for implementá-las. <br>
@@ -26,7 +26,7 @@ Criei 13 questões sobre computação e salvei em um arquivo .json para utilizar
 Corrigi a textura do mago que estava invertida e fora do lugar. <br>
 Configurei o makefile para por padrão testar a versão desktop, que é mais rápida para compilar. <br>
 Adicionei um text label no topo da tela com o nome do jogo. <br>
-<img src="images/11-02.png" alt="11-02" width="196"/>
+<img width="256" alt="11-02" src="https://github.com/user-attachments/assets/93f12685-92f4-40c7-b97a-99c42d4ec558" />
 
 ### 03/11:
 Separei o programa em funções menores e crei classes para o cavaleiro e o mago. <br>
@@ -40,7 +40,7 @@ A classe Quiz contém um vetor to tipo Question[]. A classe Question contém os 
 ### 06/11:
 Adicionei uma imagem de fundo. Baixei a imagem do site infoupdate.org. <br>
 Diminui o tamanho da fonte do texto. <br>
-<img src="images/11-06.png" alt="11-06" width="256"/>
+<img width="256" alt="11-06" src="https://github.com/user-attachments/assets/5317a5a8-03ad-4538-ac5b-5cd506d4d8d1" />
 
 ## 08/11:
 Adicionei uma música de fundo que fica em loop durante o jogo. <br>
@@ -57,7 +57,7 @@ Estava usando o leitor de arquivos padrão do java, que tem compatibilidade limi
 ## 11/11:
 Agora que a parte inicial já está pronta, finalmente implementei o quiz em si. <br>
 O player clica nos botões, e no final é exibida a pontuação total. <br>
-<img src="images/11-11.png" alt="11-11" width="512"/>
+<img width="256" alt="11-11" src="https://github.com/user-attachments/assets/e655893e-e4f7-49aa-8f15-4ee56d912259" />
 
 ## 13/11:
 Adicionei mais duas perguntas para ficar 15 no total. <br>
@@ -69,8 +69,8 @@ A seguir embaralhei também a ordem das questões. <br>
 
 ## 15/11:
 Mudei a fonte e cor de alguns textos para ficar mais fácil de ler. <br>
-<img src="images/11-15a.png" alt="11-15a" width="256"/>
-<img src="images/11-15b.png" alt="11-15b" width="256"/> <br>
+<img width="256" alt="11-15a" src="https://github.com/user-attachments/assets/bfc4cbdc-02b6-4da5-a375-93c5ead74669" />
+<img width="256" alt="11-15b" src="https://github.com/user-attachments/assets/da1c6f25-7922-496b-885b-b915a059311f" /> <br>
 Adicionei mais uma pergunta sobre banco de dados e ajustei algumas outras. <br>
 
 ## 17/11:
@@ -92,7 +92,7 @@ Já no início tive dificuldade em fazer o setup do projeto, pois estava dando e
 Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
 
 # Diagrama de classes 📋:
-<img src="images/diagram.png" alt="diagram" width="512"/>
+<img width="512" alt="diagram" src="https://github.com/user-attachments/assets/19e94ff3-4b53-4427-a941-8923469856db" />
 
 # Orientações para execução 🖥️:
 É necessário ter o Java JDK instalado apenas. <br>
