@@ -120,7 +120,7 @@ Se isso acontecer, verifique se o site tem permissão para rodar áudio e vídeo
 Veja sobre isso em: <https://support.mozilla.org/en-US/kb/block-autoplay>
 
 # Resultado final 📊:
-TODO
+https://github.com/user-attachments/assets/b641a667-6326-42eb-819f-dd82649b619a
 
 # Referências e créditos 📚:
 ## Assets:
