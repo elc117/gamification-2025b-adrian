@@ -1,12 +1,13 @@
-# Jogar:
-Baixe e compile o projeto ou acesse o seguinte link:
-<https://spicydessert.itch.io/programming-quest-beta>
+# Como Jogar:
+Baixe e compile o projeto acima <br>
+OU <br>
+acesse o seguinte link: <https://spicydessert.itch.io/programming-quest-beta>
 
 # Identificação 🪪:
 Adrian, Sistemas de Informação
 
 # Proposta 📄:
-Este é um jogo web/desktop feito na biblioteca LibGDX em Java.
+Este é um jogo para web e desktop feito na biblioteca LibGDX em Java.
 Se trata de um quiz com perguntas relacionadas a temas de computação. <br>
 Para cada questão errada, o jogador perde dois de vida, e para cada certa, recupera um de vida. <br>
 Se chegar ao final sem morrer, vence o jogo, e o inimigo, que faz as perguntas, é derrotado. <br>
@@ -93,7 +94,7 @@ Adicionei mais opções ao arquivo json, mas ainda serão escolhidas apenas quat
 
 ## Dificultades:
 Já no início tive dificuldade em fazer o setup do projeto, pois estava dando erros de dependências. Resolvi editando os arquivos do gradle. <br>
-Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que outras game engines como Unity ou Godot.<br>
+Demorei para entender como o LibGDX funciona, pois nunca havia mexido com ele antes. Achei bem mais complexo que game engines.<br>
 
 # Diagrama de classes 📋:
 <img width="512" alt="diagram" src="https://github.com/user-attachments/assets/19e94ff3-4b53-4427-a941-8923469856db" />
@@ -114,7 +115,9 @@ cd game && ./gradlew html:superDev
 cd game && ./gradlew html:dist
 ```
 ### Observação:
-Se estiver no firefox, é necessário ir na aba de permissões do site e selecionar "permitir áudio e vídeo", se não a música de fundo não toca. <br>
+É possível que os sons do jogo não toquem automaticamente em alguns navegadores como o firefox. <br>
+Se isso acontecer, verifique se o site tem permissão para rodar áudio e vídeo. <br>
+Veja sobre isso em: <https://support.mozilla.org/en-US/kb/block-autoplay>
 
 # Resultado final 📊:
 TODO
